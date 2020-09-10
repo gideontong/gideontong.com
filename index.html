@@ -1,612 +1,453 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-	<head>
-		<!-- Headers -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="Gideon Tong">
-		<meta name="description"
-			content="Welcome to Gideon Tong's landing page! Here, you can browse the site to see his projects, most recent blog posts, as well as download a copy of his most recent resume. If you would like to get in touch, his contact information is also listed online.">
-		<meta name="keywords"
-			content="Gideon Tong, programming, hacking, quadcopters, UCSD, UC San Diego, design, consulting">
-		<meta charset="UTF-8">
-		<title>Gideon Tong's Landing</title>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Gideon Tong">
+	<meta name="description"
+		content="Welcome to Gideon Tong's Landing! Here you can learn about who Gideon is and how he is trying to change the world with one small step at a time.">
+	<meta name="keywords"
+		content="Gideon Tong, personal, projects, portfolio, about me, drones, hacking, electrical engineering, computer science, UC San Diego, resume">
+	<meta charset="UTF-8">
+	<title>Gideon Tong's Landing</title>
 
-		<!-- CSS -->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-		<link rel="stylesheet" href="css/linearicons.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/magnific-popup.css">
-		<link rel="stylesheet" href="css/jquery-ui.css">
-		<link rel="stylesheet" href="css/nice-select.css">
-		<link rel="stylesheet" href="css/animate.min.css">
-		<link rel="stylesheet" href="css/owl.carousel.css">
-		<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
 
-		<!-- Icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
-		<link rel="manifest" href="img/icons/site.webmanifest">
-		<link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="img/icons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#9f00a7">
-		<meta name="msapplication-config" content="img/icons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="static/img/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/img/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/img/icons/favicon-16x16.png">
+	<link rel="manifest" href="static/img/icons/site.webmanifest">
+	<link rel="mask-icon" href="static/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="static/img/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#9f00a7">
+	<meta name="msapplication-config" content="static/img/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43108548-5"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-43108548-5');
-		</script>
-
-	</head>
-
-	<body>
-		<header id="header">
-			<div class="container main-menu">
-				<div class="row align-items-center justify-content-between d-flex">
-					<div id="logo">
-						<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-					</div>
-					<nav id="nav-menu-container">
-						<ul class="nav-menu">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
+<body>
+	<section class="banner-area" id="home">
+		<header class="default-header">
+			<nav class="navbar navbar-expand-lg  navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img src="static/img/logo.png" alt="">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="text-white fas fa-bars"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end align-items-center"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li><a>Home</a></li>
+							<li><a href="resume.html">Resume</a></li>
 							<li><a href="https://gideontong.me">Projects</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li class="menu-has-children"><a href="https://blog.gideontong.com">Blog</a>
-								<ul>
-									<li><a
-											href="https://blog.gideontong.com/2020/01/why-climb-on-roof-of-your-school.html">Recent
-											Post</a></li>
-									<li><a href="https://blog.gideontong.com" target="_blank">View All</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="https://blog.gideontong.com" target="_blank">Blog</a></li>
+							<li><a href="https://www.github.com/gideontong" target="_blank">GitHub</a></li>
 						</ul>
-					</nav>
+					</div>
 				</div>
-			</div>
+			</nav>
 		</header>
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-6 col-md-12 no-padding banner-right">
+					<img class="img-fluid" src="static/img/header-image.png" alt="">
+				</div>
+				<div class="col-lg-6 col-md-12 banner-left">
+					<h1 class="text-white">
+						Hi, I’m
+						<span>Gideon Tong</span>
+						<br>
+						EECS Student
+					</h1>
+					<p class="mx-auto text-white  mt-20 mb-40">
+						Hey! I'm an electrical engineering and computer science student at UC San Diego interested
+						in drones, data, and hacking!
+					</p>
+					<a href="https://www.linkedin.com/in/gideontong" class="text-uppercase header-btn"
+						target="_blank">LinkedIn</a>
+					<a href="https://gideontong.me" class="text-uppercase header-btn">View Projects</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<!-- Banner -->
-		<section class="banner-area">
-			<div class="container">
-				<div class="row fullscreen align-items-center justify-content-between">
-					<div class="col-lg-6 col-md-6 banner-left">
-						<h6>This is me</h6>
-						<h1>Gideon Tong</h1>
-						<p>
-							I'm an electrical engineering student at UC San Diego with an interest in quadcopters,
-							security, big data analysis, and machine learning.
-						</p>
-						<a href="https://www.linkedin.com/in/gideontong" target="_blank"
-							class="primary-btn text-uppercase">connect on LinkedIn</a>
-						<a href="https://gideontong.me" target="_blank" class="btn text-uppercase">View Projects</a>
-					</div>
-					<div class="col-lg-6 col-md-6 banner-right align-self-end">
-						<img class="img-fluid" src="img/hero-img.png" alt="A photo of Gideon Tong">
+	<section class="service-area section-gap" id="service">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-70 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">My Skills</h1>
+						<p>A quick overview of things I can do, and I'm always continuously learning.</p>
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<!-- Home About -->
-		<section class="home-about-area pt-120">
-			<div class="container">
-				<div class="row align-items-center justify-content-between">
-					<div class="col-lg-6 col-md-6 home-about-left">
-						<img class="img-fluid" src="img/about-img.png" alt="A stock photo of a man pointing">
+			<div class="row">
+				<div class="single-service col-lg-6 col-md-6 mb-30">
+					<div class="icon">
+						<img src="https://img.icons8.com/fluent/75/000000/code-file.png"
+							alt="Software Engineering Logo">
 					</div>
-					<div class="col-lg-5 col-md-6 home-about-right">
-						<h6>About Me</h6>
-						<h1 class="text-uppercase">Personal Details</h1>
-						<p>
-							Need help with full stack development in React or Python? Doing large data analysis and need a
-							Python or R package? Server setup or other kinds of consulting? I'm your guy.
-						</p>
-						<a href="about.html" class="primary-btn text-uppercase">Learn More About Me</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Portfolio -->
-		<section class="portfolio-area section-gap" id="portfolio">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-70 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Featured Projects</h1>
-						</div>
-					</div>
-				</div>
-
-				<div class="filters">
-					<ul>
-						<li class="active" data-filter="*">All</li>
-						<li data-filter=".software">Software</li>
-						<li data-filter=".hardware">Hardware</li>
-					</ul>
-				</div>
-
-				<div class="filters-content">
-					<div class="row grid">
-						<div class="single-portfolio col-sm-4 all software">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p1.jpg" alt="">
-								</div>
-								<a href="img/p1.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-							</div>
-							<div class="p-inner">
-								<h4>Authentic</h4>
-								<div class="cat">web extension</div>
-							</div>
-						</div>
-						<div class="single-portfolio col-sm-4 all hardware">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p2.jpg" alt="">
-								</div>
-								<a href="img/p2.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-							</div>
-							<div class="p-inner">
-								<h4>Outpost</h4>
-								<div class="cat">IoT toolkit</div>
-							</div>
-						</div>
-						<div class="single-portfolio col-sm-4 all software">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p3.jpg" alt="">
-								</div>
-								<a href="img/p3.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-
-							</div>
-							<div class="p-inner">
-								<h4>rouzzz</h4>
-								<div class="cat">mobile app</div>
-							</div>
-						</div>
-						<div class="single-portfolio col-sm-4 all software">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p4.jpg" alt="">
-								</div>
-								<a href="img/p4.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-							</div>
-							<div class="p-inner">
-								<h4>Meloread</h4>
-								<div class="cat">web extension</div>
-							</div>
-						</div>
-						<div class="single-portfolio col-sm-4 all hardware">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p5.jpg" alt="">
-								</div>
-								<a href="img/p5.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-							</div>
-							<div class="p-inner">
-								<h4>Project R</h4>
-								<div class="cat">top secret</div>
-							</div>
-						</div>
-						<div class="single-portfolio col-sm-4 all software">
-							<div class="relative">
-								<div class="thumb">
-									<div class="overlay overlay-bg"></div>
-									<img class="image img-fluid" src="img/p6.jpg" alt="">
-								</div>
-								<a href="img/p6.jpg" class="img-pop-up">
-									<div class="middle">
-										<div class="text align-self-center d-flex"><img src="img/preview.png" alt=""></div>
-									</div>
-								</a>
-							</div>
-							<div class="p-inner">
-								<h4>EpicDrive</h4>
-								<div class="cat">mass storage</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row d-flex justify-content-center">
-					<div class="col-lg-8">
-						<div class="text-center">
-							<h2><a href="https://gideontong.me" target="_blank">
-									Click here to see all projects!</a></h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Scrolling Numbers -->
-		<section class="facts-area section-gap" id="facts-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 single-fact">
-						<h1 class="counter">90</h1>
-						<p>GitHub Repos</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fact">
-						<h1 class="counter">43</h1>
-						<p>Blog Posts</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fact">
-						<h1 class="counter">275</h1>
-						<p>YouTube Videos</p>
-					</div>
-					<div class="col-lg-3 col-md-6 single-fact">
-						<h1 class="counter">84,000</h1>
-						<p>Video Views</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Recent Blog Posts -->
-		<section class="recent-blog-area section-gap">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-8 pb-30 header-text">
-						<h1>Latest Blog Posts</h1>
-						<p>
-							Curious about the journey of my projects or just want a server tutorial? I love posting about
-							my experiences, so between my blog and my YouTube channel, I aim to provide lots of
-							high-quality content.
+					<div class="dec">
+						<h4 class="mt-30"><a href="https://www.github.com/gideontong" target="_blank">Software
+								Engineering</a></h4>
+						<p class="mt-20">
+							I have experience with app development, full-stack development, and many common frameworks
+							and
+							platforms. My workflow is highly streamlined and utilizes a variety of tools.
 						</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="single-recent-blog col-lg-4 col-md-4">
-						<div class="thumb">
-							<img class="f-img img-fluid mx-auto" src="img/b3.jpg" alt="">
-						</div>
-						<div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-							<div>
-								<img class="img-fluid" src="img/user.png" alt="">
-								<a href="https://www.linkedin.com/in/gideontong" target="_blank"><span>Gideon
-										Tong</span></a>
-							</div>
-							<div class="meta">
-								25th May
-								<span class="lnr lnr-eye"></span> 3.0K
-								<span class="lnr lnr-bubble"></span> 0
-							</div>
-						</div>
-						<a href="https://blog.gideontong.com/2020/05/a-rootless-nearly-full-featured-shell.html"
-							target="_blank">
-							<h4>A rootless, (nearly) full-featured shell for iOS</h4>
-						</a>
-						<p>
-							This blog post isn't a personal project, but actually about someone else's passion project and
-							it's super cool.
+				<div class="single-service col-lg-6 col-md-6 mb-30">
+					<div class="icon">
+						<img src="https://img.icons8.com/fluent/75/000000/project-setup--v2.png"
+							alt="Project Management Logo">
+					</div>
+					<div class="dec">
+						<h4 class="mt-30"><a>Project Management</a></h4>
+						<p class="mt-20">
+							As the leader of a university-funded research project, I have the experience and
+							communication
+							skills necessary to ensure success in every project, no matter how big or small.
 						</p>
 					</div>
-					<div class="single-recent-blog col-lg-4 col-md-4">
-						<div class="thumb">
-							<img class="f-img img-fluid mx-auto" src="img/b1.jpg" alt="">
-						</div>
-						<div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-							<div>
-								<img class="img-fluid" src="img/user.png" alt="">
-								<a href="https://www.linkedin.com/in/gideontong" target="_blank"><span>Gideon
-										Tong</span></a>
-							</div>
-							<div class="meta">
-								3rd Jan
-								<span class="lnr lnr-eye"></span> 8.5K
-								<span class="lnr lnr-bubble"></span> 0
-							</div>
-						</div>
-						<a href="https://blog.gideontong.com/2020/01/why-climb-on-roof-of-your-school.html"
-							target="_blank">
-							<h4>Why climb on the roof of your school?</h4>
-						</a>
-						<p>
-							I heard the roof of the Geisel Library was pretty cool - so I went up there. Then I wrote about
-							my experience and how I got there!
+				</div>
+				<div class="single-service col-lg-6 col-md-6">
+					<div class="icon">
+						<img src="https://img.icons8.com/fluent/75/000000/circuit.png" alt="Schematic Design Logo">
+					</div>
+					<div class="dec">
+						<h4 class="mt-30"><a>PCB and Schematic Design</a></h4>
+						<p class="mt-20">
+							I have experience with schematic capture and board layout, and have designed and prototyped
+							my own PCBs for use in production. (Just show me the datasheet?)
 						</p>
 					</div>
-					<div class="single-recent-blog col-lg-4 col-md-4">
-						<div class="thumb">
-							<img class="f-img img-fluid mx-auto" src="img/b2.jpg" alt="">
-						</div>
-						<div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-							<div>
-								<img class="img-fluid" src="img/user.png" alt="">
-								<a href="https://www.linkedin.com/in/gideontong" target="_blank"><span>Gideon
-										Tong</span></a>
-							</div>
-							<div class="meta">
-								14th Aug
-								<span class="lnr lnr-eye"></span> 5.8K
-								<span class="lnr lnr-bubble"></span> 0
-							</div>
-						</div>
-						<a href="https://blog.gideontong.com/2019/08/super-holloway-store-project.html" target="_blank">
-							<h4>Super Holloway Store Project</h4>
-						</a>
-						<p>
-							Have you ever tried to set up a store? It's harder than you think - and that's if you try
-							harder than just using Shopify, or play hard mode using Magneto.
+				</div>
+				<div class="single-service col-lg-6 col-md-6">
+					<div class="icon">
+						<img src="https://img.icons8.com/fluent/75/000000/module.png" alt="Workflow Logo">
+					</div>
+					<div class="dec">
+						<h4 class="mt-30"><a>Streamlined Workflow</a></h4>
+						<p class="mt-20">
+							With experience in all major platforms and a toolset that works independent of scenario or
+							environment, my workflow is optimized to be fast and accurate no matter where I go.
 						</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Services -->
-		<section class="services-area section-gap">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content  col-lg-7">
-						<div class="title text-center">
-							<h1 class="mb-10">My Offered Services</h1>
-							<p>If you need a quick job done, or even long-term support for a small project, I'm your guy.
-							</p>
+	<section class="about-area section-gap" id="about">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-70 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">About Me</h1>
+						<p>I love &#x1f3ca swimming, &#x1f469 hacking, and &#x1f525 telling you things are fine!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 about-left">
+					<p>
+						I often start projects that have long-term goals, and take several years to flesh out and
+						develop. Bringing these projects to market as an actual product takes additional time, as
+						I want to ensure that I get things right the first time.
+					</p>
+					<h4 class="pb-40">Current Goals and Projects</h4>
+					<div class="skillbar" data-percent="85%">
+						<div class="skill-bar-percent"><b>Amy (AI Chatbot)</b> 45%</div>
+						<div class="skillwrap">
+							<div class="skillbar-bar" style="width: 45%;"></div>
+						</div>
+					</div>
+
+					<div class="skillbar" data-percent="80%">
+						<div class="skill-bar-percent"><b>Secret Hardware Project</b> 10%</div>
+						<div class="skillwrap">
+							<div class="skillbar-bar" style="width: 10%;"></div>
+						</div>
+					</div>
+
+					<div class="skillbar" data-percent="40%">
+						<div class="skill-bar-percent"><b>Cybersecurity Toolkit</b> 80%</div>
+						<div class="skillwrap">
+							<div class="skillbar-bar" style="width: 80%;"></div>
+						</div>
+					</div>
+
+					<div class="skillbar" data-percent="70%">
+						<div class="skill-bar-percent"><b>New Workstation Setup</b> 0%</div>
+						<div class="skillwrap">
+							<div class="skillbar-bar" style="width: 0%;"></div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
-							<span class="lnr lnr-laptop-phone"></span>
-							<a href="#">
-								<h4>App Development</h4>
-							</a>
-							<p>
-								Does your business need an app? Mobile orders for customers? Your restaurant menu? Internal
-								use only? I'm your guy.
-							</p>
+				<div class="col-lg-6 about-right justify-content-end d-flex">
+					<div class="myself-wrap">
+						<img class="img-fluid" src="static/img/about-image.jpg" alt="">
+						<div class="desc">
+							<h4>Gideon Tong</h4>
+							<p class="pb-10">Engineer and Swimmer</p>
+							<p><span class="fas fa-phone"></span> Zoom: Gideon Tong</p>
+							<p><span class="fas fa-envelope-open"></span> gideon@gideontong.com</p>
+							<a class="mt-30 text-uppercase talk-btn" href="mailto:gideon@gideontong.com">Contact
+								Me</span></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
-							<span class="lnr lnr-dice"></span>
-							<a href="#">
-								<h4>IT Consulting</h4>
-							</a>
-							<p>
-								I'll help you set up home networks or large-scale home theater setups. Or a small business
-								needing large storage? Call me.
-							</p>
-						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="qualification-area pt-100 pb-80">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-20 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">My Experience</h1>
+						<p>For more information, check out my <i class="fab fa-linkedin"></i> LinkedIn page!</p>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
-							<span class="lnr lnr-music-note"></span>
-							<a href="#">
-								<h4>Event Development</h4>
-							</a>
-							<p>
-								Your WiFi down in large venues? Maybe too many people crowding the airwaves and your team
-								can't communicate? I'll help.
-							</p>
-						</div>
+				</div>
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-6 col-md-6 qty-left">
+					<div class="single-qly">
+						<h3 class="text-uppercase">Tudrme</h3>
+						<p>September 2018 to March 2020</p>
+						<h4 class="pt-20 pb-20">Co-Founder and Software Engineer</h4>
+						<p>
+							I worked on creating a platform for students and tutors to connect and get the
+							educational help they need.
+						</p>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
-							<span class="lnr lnr-code"></span>
-							<a href="#">
-								<h4>Code Review</h4>
-							</a>
-							<p>
-								Your project having issues communicating with other teams? Get the APIs you need for
-								success.
-							</p>
-						</div>
+					<div class="btm-border d-block mx-auto"></div>
+					<div class="single-qly">
+						<h3 class="text-uppercase">Sandbox Computers</h3>
+						<p>June 2018 to September 2018</p>
+						<h4 class="pt-20 pb-20">Programming Instructor</h4>
+						<p>
+							I wrote software projects and lesson plans for students in Ruby, Python, Arduino,
+							and Raspberry Pi.
+						</p>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
-							<span class="lnr lnr-gift"></span>
-							<a href="#">
-								<h4>Penetration Testing</h4>
-							</a>
-							<p>
-								If you like mischief and have read this far in my website, well done. We could <i>talk</i>
-								about this.
-							</p>
-						</div>
+				</div>
+				<div class="col-lg-6 col-md-6 qty-right">
+					<div class="single-qly">
+						<h3 class="text-uppercase">Education</h3>
+						<p><b>UC San Diego</b> 2022</p>
+						<h4 class="pt-20 pb-20">B. of Science in Electrical Engineering</h4>
+						<p><b>GPA</b>: 3.7 (Current), Provost's Honors</p>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="single-services">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-area section-gap" id="project">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-70 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">Featured Projects</h1>
+						<p>If you'd like to learn more, check out my <i class="fab fa-github"></i> GitHub page!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 project-left">
+					<div class="single-project pb-100">
+						<img class="img-fluid" src="static/img/top.jpg" alt="Gradient">
+						<h4 class="pt-100 pb-30"><a>Bot4Christ</a></h4>
+						<p>
+							Aside from Amy, which is a tool that brings general communities together, I also work
+							on Bot4Christ, which brings together Christian communities with Bible study tools and
+							tons of Bible reference features.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 project-right">
+					<div class="single-project">
+						<h4 class="pt-30 pb-30"><a>The Latest</a></h4>
+						<p class=" pb-100">
+							I run a blog documenting my projects to which I post from time to time, and it has gained
+							over a million pageviews to date. If you're curious, do check out my blog at the top of
+							this page.
+						</p>
+						<img class="img-fluid" src="static/img/bottom.jpg" alt="Gradient">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="feature-area pt-100">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-70 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">My Workflow</h1>
+						<p>A little bit about the languages, platforms, environments, and tools I use every day.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature mb-30">
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-user"></span>
+							<h4><a>Full Stack Development</a></h4>
+						</div>
+						<p>
+							I primarily use Node.js and JavaScript (ES6), but also Express.js, React.js, TypeScript,
+							and Django (Python).
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature mb-30">
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-license"></span>
+							<h4><a>App Development</a></h4>
+						</div>
+						<p>
+							I primarily target ARM-based computers, be it iOS/Android or Raspberry Pis and Arduinos,
+							often choosing C++.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature mb-30">
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-phone"></span>
+							<h4><a>Continuous Integration</a></h4>
+						</div>
+						<p>
+							Most of my projects use CI/CD in two stages, using Travis.CI, GitHub Actions, and Google
+							Cloud Platform.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature">
+						<div class="title d-flex flex-row pb-20">
 							<span class="lnr lnr-rocket"></span>
-							<a href="#">
-								<h4>Hardware Design</h4>
-							</a>
-							<p>
-								Your [choice of device] doesn't do the trick. Well, sometimes there's an easier solution,
-								it just needs to be made.
-							</p>
+							<h4><a>Project Management</a></h4>
+						</div>
+						<p>
+							To ensure my teams and I remain on track and on top, I utilize Notion, kanban boards, and
+							constant communication.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature">
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-diamond"></span>
+							<h4><a>PCB Design</a></h4>
+						</div>
+						<p>
+							Primarily an Altium user, I also can use OrCAD with PSpice for simulations and SolidWorks
+							for 3D CAD.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 ">
+					<div class="single-feature">
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-bubble"></span>
+							<h4><a>Hacking (Cybersecurity)</a></h4>
+						</div>
+						<p>
+							I use local and remote VMs, choosing Kali Linux and Windows as my main targets due to
+							wide availability of tools.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-gap">
+	</section>
+
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Gideon</h6>
+						<p>
+							I'm a university &#x1f393 student at UC San Diego studying electrical engineering,
+							but I also like drones, data, and hacking!
+						</p>
+						<p class="footer-text">Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+							</script> Gideon Tong</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Contact Me</h6>
+						<div class="row p-2">
+							<div class="p-1">
+								<a class="click-btn btn btn-default" href="mailto:gideon@gideontong.com">
+									By Email
+								</a>
+							</div>
+							<div class="p-1">
+								<a class="click-btn btn btn-default" href="https://www.linkedin.com/in/gideontong"
+									target="_blank">
+									By InMail
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6 social-widget">
+					<div class="single-footer-widget">
+						<h6>Connect With Me</h6>
+						<p>Add me on social media!</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="https://www.linkedin.com/in/gideontong" target="_blank"><i
+									class="fab fa-linkedin-in"></i></a>
+							<a href="https://www.twitter.com/gideontong" target="_blank"><i
+									class="fab fa-twitter"></i></a>
+							<a href="https://www.github.com/gideontong" target="_blank"><i
+									class="fab fa-github"></i></a>
+							<a href="https://www.youtube.com/funnygid123" target="_blank"><i
+									class="fab fa-youtube"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</footer>
 
-		<!-- Twitter Feed -->
-		<section class="testimonial-area section-gap">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-70 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Highlighted Tweets</h1>
-							<p>Some of these tweets are mine, and some are not. I hope you enjoy making it this far down
-								the page.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="active-testimonial">
-						<div class="single-testimonial item d-flex flex-row">
-							<div class="thumb">
-								<img class="img-fluid" src="img/elements/user1.png" alt="">
-							</div>
-							<div class="desc">
-								<p>
-									A QA engineer walks into a bar. Orders a beer. Orders 0 beers. Orders 99999999999
-									beers. Orders a lizard. Orders -1 beers. Orders a ueicbksjdhd.
-								</p>
-								<h4>Bernan Keller</h4>
-								<p>Los Angeles</p>
-							</div>
-						</div>
-						<div class="single-testimonial item d-flex flex-row">
-							<div class="thumb">
-								<img class="img-fluid" src="img/elements/user2.png" alt="">
-							</div>
-							<div class="desc">
-								<p>
-									If anyone wants to hire me for an internship or job at the start of this decade I am
-									open to offers
-								</p>
-								<h4>Gideon Tong</h4>
-								<p>That's Me!</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+	<script src="js/main.js"></script>
 
-		<!-- Brands -->
-		<section class="brands-area">
-			<div class="container">
-				<div class="brand-wrap">
-					<div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-						<div class="col single-brand">
-							<a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
-						</div>
-						<div class="col single-brand">
-							<a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
-						</div>
-						<div class="col single-brand">
-							<a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
-						</div>
-						<div class="col single-brand">
-							<a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
-						</div>
-						<div class="col single-brand">
-							<a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+</body>
 
-		<!-- Footer -->
-		<footer class="footer-area section-gap">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 col-md-6 col-sm-6">
-						<div class="single-footer-widget">
-							<h4>About Me</h4>
-							<p>
-								Welcome to my homepage! Thanks for exploring, hope you stick around. If you have any
-								questions, feel free to contact me.
-							</p>
-							<p class="footer-text">
-								Copyright &copy;<script>
-									document.write(new Date().getFullYear());
-								</script> Gideon Tong | All rights reserved
-							</p>
-						</div>
-					</div>
-					<div class="col-lg-5 col-md-6 col-sm-6">
-						<div class="single-footer-widget">
-							<h4>Stay Updated</h4>
-							<p>See with my latest posts</p>
-							<div class="" id="mc_embed_signup">
-								<form action="https://www.formspree.io/homepage-subscribe@wehack.ga" method="post">
-									<div class="input-group">
-										<input type="text" class="form-control" name="EMAIL"
-											placeholder="Enter Email Address" onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter Email Address '" required="" type="email">
-										<div class="input-group-btn">
-											<button class="btn btn-default" type="submit">
-												<span class="lnr lnr-arrow-right"></span>
-											</button>
-										</div>
-										<div class="info"></div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-						<div class="single-footer-widget">
-							<h4>Follow Me</h4>
-							<p>Or contact me</p>
-							<div class="footer-social d-flex align-items-center">
-								<a href="https://www.twitter.com/gideontong" target="_blank"><i
-										class="fa fa-twitter"></i></a>
-								<a href="https://www.youtube.com/funnygid123" target="_blank"><i
-										class="fa fa-youtube-play"></i></a>
-								<a href="https://www.instagram.com/gideonsnaps" target="_blank"><i
-										class="fa fa-instagram"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<script src="js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/easing.min.js"></script>
-		<script src="js/hoverIntent.js"></script>
-		<script src="js/superfish.min.js"></script>
-		<script src="js/jquery.ajaxchimp.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/jquery.tabs.min.js"></script>
-		<script src="js/jquery.nice-select.min.js"></script>
-		<script src="js/isotope.pkgd.min.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script src="js/jquery.counterup.min.js"></script>
-		<script src="js/simple-skillbar.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/mail-script.js"></script>
-		<script src="js/main.js"></script>
-	</body>
-
-	</html>
+</html>
