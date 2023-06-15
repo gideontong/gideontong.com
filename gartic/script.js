@@ -1,3 +1,5 @@
+console.log('Loading...');
+
 let slide = 1;
 
 function show(n) {
