@@ -73,6 +73,8 @@ async function run() {
         select.appendChild(element);
     }
 
+    console.log(albums, counts);
+
     const dropdown = document.getElementById("selector");
     dropdown.onchange = function () {
         const selectedOption = dropdown.options[dropdown.selectedIndex];
