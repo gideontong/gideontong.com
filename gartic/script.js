@@ -1,3 +1,4 @@
+console.log('test')
 let slide = 1;
 
 function show(n) {
@@ -57,7 +58,6 @@ function setSlideshow(item, count) {
 }
 
 async function run() {
-    console.log('test')
     let response = await fetch('./counts.json');
     const counts = await response.json();
 
