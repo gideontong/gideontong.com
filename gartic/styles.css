@@ -5,6 +5,7 @@
 /* Slideshow container */
 .container {
     width: 100%;
+    max-width: 768px;
     position: relative;
     margin-top: 2rem;
 }
