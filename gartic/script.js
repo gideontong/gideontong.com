@@ -1,4 +1,3 @@
-console.log('test')
 let slide = 1;
 
 function show(n) {
