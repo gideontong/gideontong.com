@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gideon Tong">
+    <meta name="description"
+        content="Dietary allergen reference and dining card for Gideon Tong. Comprehensive information regarding tree nut allergies, cross-contact prevention, and emergency protocol.">
+    <title>Gideon Tong's Allergies</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <meta name="theme-color" content="#dc2626" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#991b1b" media="(prefers-color-scheme: dark)">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Site Navigation -->
+        <nav class="site-nav">
+            <div class="nav-brand">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2" />
+                    <path d="M15 2v19" />
+                    <path d="M5 2v7a3 3 0 0 0 3 3 3 3 0 0 0 3-3V2" />
+                    <path d="M8 2v19" />
+                </svg>
+                Gideon Tong
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <header class="header-section">
+            <span class="badge-pill badge-danger">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                Medical & Dietary Reference
+            </span>
+            <h1 class="page-title">Gideon Tong's Allergies</h1>
+            <p class="page-subtitle">
+                A quick reference for dining, catering, event hosts, and emergency response.
+            </p>
+
+            <div class="action-bar">
+                <button class="btn btn-secondary" onclick="window.print()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                        <rect width="12" height="8" x="6" y="14" />
+                    </svg>
+                    Print PDF
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Chef Alert Card -->
+        <div class="chef-card" id="chefCard">
+            <div class="chef-card-header">
+                <div class="chef-card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    CRITICAL ALLERGY ALERT: TREE NUTS
+                </div>
+                <span class="badge-pill badge-danger" style="margin: 0;">Severe / Anaphylactic</span>
+            </div>
+            <div class="chef-card-body">
+                I have a <strong>severe, life-threatening allergy to ALL tree nuts</strong> (including walnuts, cashews,
+                almonds, pistachios, hazelnuts, pecans, macadamias, Brazil nuts, and pine nuts).
+                <br><br>
+                Please ensure my meal contains <strong>NO tree nuts, nut oils, nut flours, nut pastes/butters, pestos,
+                    or almond extracts</strong>. Please use clean surfaces, cookware, fryers, and utensils to prevent
+                <strong>cross-contact</strong>.
+            </div>
+            <div class="chef-card-footer">
+                <span><strong>Name:</strong> Gideon Tong</span>
+                <span><strong>Emergency Action:</strong> Epinephrine (EpiPen) & Call 911</span>
+            </div>
+        </div>
+
+        <!-- Tree Nuts Breakdown -->
+        <section class="section-card">
+            <h2 class="section-title">
+                🌰 Tree Nuts to Avoid (Comprehensive List)
+            </h2>
+            <p class="section-desc">
+                Strictly avoid any direct ingredients, oils, meal, milk, flours, or processed items derived from these
+                nuts:
+            </p>
+
+            <div class="search-container">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" id="nutSearch" class="search-input"
+                    placeholder="Search nuts or ingredients (e.g. cashew, pesto, almond)..." oninput="filterNuts()">
+            </div>
+
+            <div class="nut-grid" id="nutGrid">
+                <div class="nut-card" data-keywords="almond almonds marzipan frangipane amaretto almond milk flour">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Almonds</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Prunus dulcis (flour, milk, marzipan, extract)</span>
+                </div>
+
+                <div class="nut-card" data-keywords="walnut walnuts english black walnut nocino oil">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Walnuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">English & Black walnuts, walnut oil, nocino</span>
+                </div>
+
+                <div class="nut-card" data-keywords="cashew cashews kaju vegan cheese paste cream">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Cashews</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Anacardium occidentale, cashew cream/cheese, kaju</span>
+                </div>
+
+                <div class="nut-card" data-keywords="pistachio pistachios kulfi baklava paste">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Pistachios</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Pistacia vera, pistachio paste, gelato, baklava</span>
+                </div>
+
+                <div class="nut-card"
+                    data-keywords="hazelnut hazelnuts filbert filberts gianduja nutella praline frangelico">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Hazelnuts / Filberts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Corylus, gianduja, pralines, Frangelico</span>
+                </div>
+
+                <div class="nut-card" data-keywords="pecan pecans praline pie butter">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Pecans</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Carya illinoinensis, pecan pies, pralines</span>
+                </div>
+
+                <div class="nut-card" data-keywords="macadamia macadamias queensland nut">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Macadamia Nuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Macadamia integrifolia, Queensland nuts, cookies</span>
+                </div>
+
+                <div class="nut-card" data-keywords="brazil nut brazil nuts amazon nut castanha">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Brazil Nuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Bertholletia excelsa, Amazon nuts</span>
+                </div>
+
+                <div class="nut-card" data-keywords="pine nut pine nuts pignoli pinon pignolia pesto">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Pine Nuts (Pignoli)</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Pinus seeds, traditional pesto, pignolia</span>
+                </div>
+
+                <div class="nut-card" data-keywords="chestnut chestnuts water chestnut marron glace">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Chestnuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Castanea (sweet chestnuts, marrons glacés)</span>
+                </div>
+
+                <div class="nut-card" data-keywords="hickory nut hickory nuts">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Hickory Nuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Carya ovata and related hickory species</span>
+                </div>
+
+                <div class="nut-card" data-keywords="beech nut beechnut pili nut ginkgo chinquapin">
+                    <div class="nut-card-head">
+                        <span class="nut-name">Other Tree Nuts</span>
+                        <span class="nut-status-badge">Strict Avoid</span>
+                    </div>
+                    <span class="nut-alias">Beech nuts, Pili nuts, Chinquapins, Ginkgo nuts</span>
+                </div>
+            </div>
+            <p id="noNutsFound" style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
+                No matching tree nuts found for your search.
+            </p>
+        </section>
+
+        <!-- Hidden Sources & High-Risk Culinary Items -->
+        <section class="section-card">
+            <h2 class="section-title">
+                ⚠️ High-Risk Dishes & Hidden Sources
+            </h2>
+            <p class="section-desc">
+                Tree nuts are frequently concealed in sauces, garnishes, thickeners, and desserts:
+            </p>
+
+            <div class="hidden-sources-grid">
+                <div class="source-box">
+                    <div class="source-category">
+                        🍝 Sauces, Pestos & Curries
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Pesto:</strong> Traditionally made with pine nuts or walnuts.</li>
+                        <li><strong>Indian Curries & Korma:</strong> Often thickened with cashew or almond paste.</li>
+                        <li><strong>Mole & Romesco:</strong> Frequently contain almonds, walnuts, or hazelnuts.</li>
+                        <li><strong>Thai / Asian Sauces:</strong> Crushed nut garnishes & shared woks.</li>
+                    </ul>
+                </div>
+
+                <div class="source-box">
+                    <div class="source-category">
+                        🥐 Bakery, Pastries & Desserts
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Marzipan & Frangipane:</strong> Pure almond paste / almond meal.</li>
+                        <li><strong>Baklava, Nougat & Pralines:</strong> Packed with pistachios, walnuts, hazelnuts.
+                        </li>
+                        <li><strong>Macarons:</strong> Traditionally made with almond flour.</li>
+                        <li><strong>Artisan Breads:</strong> May contain walnut pieces or seed/nut blends.</li>
+                    </ul>
+                </div>
+
+                <div class="source-box">
+                    <div class="source-category">
+                        🍸 Specialty Beverages & Liqueurs
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Amaretto:</strong> Almond or apricot kernel base.</li>
+                        <li><strong>Frangelico:</strong> Hazelnut-infused liqueur.</li>
+                        <li><strong>Nocino:</strong> Unripe green walnut liqueur.</li>
+                        <li><strong>Cocktail Orgeat Syrup:</strong> Almond-based cocktail sweetener.</li>
+                    </ul>
+                </div>
+
+                <div class="source-box">
+                    <div class="source-category">
+                        🍳 Kitchen Cross-Contact Hazards
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Shared Fryers:</strong> Frying nut-crusted items in common oil.</li>
+                        <li><strong>Ice Cream & Gelato Scoops:</strong> Shared rinse water bins.</li>
+                        <li><strong>Cutting Boards & Knives:</strong> Chopping garnishes without sanitizing.</li>
+                        <li><strong>Buffets & Salad Bars:</strong> Tongs transferred between bowls.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Clarifications (Safe vs Unsafe) -->
+        <section class="section-card">
+            <h2 class="section-title">
+                🔍 Common Distinctions & Clarifications
+            </h2>
+            <p class="section-desc">
+                Botanical distinctions for ingredients that have "nut" in the name or are commonly confused:
+            </p>
+
+            <div class="clarify-grid">
+                <div class="clarify-item">
+                    <div class="clarify-left">
+                        <div class="clarify-title">🥜 Peanuts</div>
+                        <div class="clarify-desc">Peanuts are legumes (grow underground), not botanical tree nuts.
+                            However, severe cross-contact risk often occurs in processing facilities.</div>
+                    </div>
+                    <div class="clarify-badge">
+                        <span class="badge-pill badge-warning">Verify Cross-Contact</span>
+                    </div>
+                </div>
+
+                <div class="clarify-item">
+                    <div class="clarify-left">
+                        <div class="clarify-title">🥥 Coconut</div>
+                        <div class="clarify-desc">Botanically a drupe / fibrous one-seeded fruit. Classified as a tree
+                            nut by US FDA for labeling, but biologically distinct.</div>
+                    </div>
+                    <div class="clarify-badge">
+                        <span class="badge-pill badge-info">Botanical Fruit</span>
+                    </div>
+                </div>
+
+                <div class="clarify-item">
+                    <div class="clarify-left">
+                        <div class="clarify-title">🌱 Seeds (Sesame, Sunflower, Pumpkin, Chia)</div>
+                        <div class="clarify-desc">Seeds are botanically distinct from tree nuts and are generally
+                            separate unless processed on shared machinery.</div>
+                    </div>
+                    <div class="clarify-badge">
+                        <span class="badge-pill badge-success">Generally Separate</span>
+                    </div>
+                </div>
+
+                <div class="clarify-item">
+                    <div class="clarify-left">
+                        <div class="clarify-title">🧂 Nutmeg, Butternut Squash & Water Chestnuts</div>
+                        <div class="clarify-desc">Nutmeg is a spice seed (Myristica fragrans); Water chestnuts are
+                            aquatic tubers; Butternut is a squash vegetable. None are tree nuts.</div>
+                    </div>
+                    <div class="clarify-badge">
+                        <span class="badge-pill badge-success">Not a Tree Nut</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Response Plan -->
+        <div class="emergency-card">
+            <div class="emergency-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+                Emergency Action Protocol (Anaphylaxis)
+            </div>
+            <p style="font-size: 0.9rem; color: var(--warning-text); line-height: 1.5;">
+                If accidental ingestion occurs and symptoms appear (difficulty breathing, swelling of throat/lips,
+                severe hives, vomiting, or dizziness):
+            </p>
+
+            <div class="emergency-steps">
+                <div class="step-box">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <strong>Inject Epinephrine (EpiPen)</strong> into the outer mid-thigh immediately. Hold for 3
+                        seconds.
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <strong>Call 911 immediately</strong> and state: <em>"Anaphylactic allergic reaction to tree
+                            nuts."</em>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <strong>Stay with the person</strong> and keep them lying flat (or seated if breathing is hard).
+                        Administer secondary dose in 5-15 min if needed.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>
+                Gideon Tong &copy; <span id="year"></span> &bull;
+                <a href="/">gideontong.com</a> &bull;
+                <a href="mailto:gideon@gideontong.com">Contact</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Live Filter for Tree Nuts
+        function filterNuts() {
+            const query = document.getElementById('nutSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('#nutGrid .nut-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords') || '';
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query) || keywords.includes(query)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noFound = document.getElementById('noNutsFound');
+            if (visibleCount === 0) {
+                noFound.style.display = 'block';
+            } else {
+                noFound.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
