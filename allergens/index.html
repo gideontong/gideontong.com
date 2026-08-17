@@ -23,22 +23,6 @@
 <body>
 
     <div class="container">
-        <!-- Site Navigation -->
-        <nav class="site-nav">
-            <div class="nav-brand">
-                <span>Gideon Tong</span>
-                <span class="badge-pill badge-danger">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
-                        <line x1="12" y1="9" x2="12" y2="13" />
-                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                    </svg>
-                    Dietary Allergen Reference
-                </span>
-            </div>
-        </nav>
-
         <!-- Header Section -->
         <header class="header-section">
             <h1 class="page-title">Gideon Tong's Allergies</h1>
@@ -355,57 +339,80 @@
             </div>
         </section>
 
-        <!-- Common Clarifications (Safe vs Unsafe) -->
+        <!-- Common Clarifications -->
         <section class="section-card">
             <h2 class="section-title">
                 Common Distinctions & Clarifications
             </h2>
             <p class="section-desc">
-                Botanical distinctions for ingredients that have "nut" in the name or are commonly confused:
+                Key distinctions regarding raw nuts, spice forms, peppers, seeds, and commonly confused ingredients:
             </p>
 
             <div class="clarify-grid">
                 <div class="clarify-item">
+                    <div class="clarify-title">Raw vs. Baked / Cooked Nuts</div>
+                    <div class="clarify-desc">The tree nut allergy specifically applies to raw and uncooked tree nuts (such as fresh raw
+                        nut garnishes, uncooked pestos, and unbaked vegan cashew creams).</div>
+                </div>
+                
+                <div class="clarify-item">
+                    <div class="clarify-title">Fresh Aromatics vs. Powdered Spices</div>
+                    <div class="clarify-desc">The spice restriction focuses on dry ground/powdered spices and seasoning blends. Fresh
+                        whole garlic cloves, fresh whole ginger root, and fresh onions are distinct from dehydrated powders.</div>
+                </div>
+                
+                <div class="clarify-item">
+                    <div class="clarify-title">Black & White Peppercorns vs. Capsaicin</div>
+                    <div class="clarify-desc">Table black, white, and green peppercorns (Piper nigrum) contain piperine, not capsaicin,
+                        and are biologically unrelated to Capsicum chili peppers (jalapeños, cayenne, paprika).</div>
+                </div>
+                
+                <div class="clarify-item">
+                    <div class="clarify-title">Pink Peppercorns (Cashew Family)</div>
+                    <div class="clarify-desc">Pink peppercorns are dried berries from the Brazilian pepper tree (Schinus
+                        terebinthifolia), which belongs to the cashew family (Anacardiaceae) and should be avoided.</div>
+                </div>
+                
+                <div class="clarify-item">
+                    <div class="clarify-title">Sichuan Peppercorns</div>
+                    <div class="clarify-desc">Sichuan peppercorns are the husks of prickly ash shrubs (citrus family) and produce a
+                        numbing sensation from hydroxy-alpha-sanshool, containing no capsaicin.</div>
+                </div>
+                
+                <div class="clarify-item">
+                    <div class="clarify-title">Fresh Herbs & Leafy Greens</div>
+                    <div class="clarify-desc">Fresh culinary herbs (such as fresh basil, cilantro, parsley, rosemary, thyme, and mint)
+                        are fresh leafy produce and are distinct from dry powdered seasoning blends.</div>
+                </div>
+
+                <div class="clarify-item">
                     <div class="clarify-title">Peanuts</div>
-                    <div class="clarify-desc">Peanuts are legumes (grow underground), not botanical tree nuts.
-                        However, cross-contact risk often occurs in processing facilities.</div>
+                    <div class="clarify-desc">Peanuts are legumes (grow underground), not botanical tree nuts. However, cross-contact risk
+                        can occur in shared processing facilities.</div>
                 </div>
 
                 <div class="clarify-item">
                     <div class="clarify-title">Coconut</div>
-                    <div class="clarify-desc">Botanically a drupe / fibrous one-seeded fruit. Classified as a tree
-                        nut by US FDA for labeling, but biologically distinct.</div>
+                    <div class="clarify-desc">Botanically a drupe / fibrous one-seeded fruit. Classified as a tree nut by US FDA for
+                        labeling, but biologically distinct from true tree nuts.</div>
                 </div>
 
                 <div class="clarify-item">
                     <div class="clarify-title">Seeds (Sesame, Sunflower, Pumpkin, Chia)</div>
-                    <div class="clarify-desc">Seeds are botanically distinct from tree nuts and are generally
-                        separate unless processed on shared machinery.</div>
+                    <div class="clarify-desc">Culinary seeds (sesame, sunflower, pumpkin, chia, flax, poppy) are botanically distinct from
+                        tree nuts and are generally separate unless processed on shared machinery.</div>
                 </div>
 
                 <div class="clarify-item">
                     <div class="clarify-title">Nutmeg, Butternut Squash & Water Chestnuts</div>
-                    <div class="clarify-desc">Nutmeg is a spice seed (Myristica fragrans); Water chestnuts are
-                        aquatic tubers; Butternut is a squash vegetable. None are tree nuts.</div>
+                    <div class="clarify-desc">Nutmeg is a spice seed (Myristica fragrans); Water chestnuts are aquatic tubers; Butternut is
+                        a squash vegetable. None are botanical tree nuts.</div>
                 </div>
             </div>
         </section>
-
-
-        <!-- Footer -->
-        <footer class="page-footer">
-            <p>
-                Gideon Tong &copy; <span id="year"></span> &bull;
-                <a href="/">gideontong.com</a> &bull;
-                <a href="mailto:gideon@gideontong.com">Contact</a>
-            </p>
-        </footer>
     </div>
 
     <script>
-        // Set dynamic current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
         // Live Filter for Tree Nuts, Powdered Spices, and Capsaicin
         function filterAllergens() {
             const query = document.getElementById('allergenSearch').value.toLowerCase().trim();
