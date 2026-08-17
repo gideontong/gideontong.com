@@ -121,7 +121,8 @@ body {
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
     user-select: none;
 }
 
@@ -141,7 +142,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 9999px;
-    margin-bottom: 1rem;
 }
 
 .badge-danger {
@@ -246,21 +246,13 @@ p.page-subtitle {
     border: 2px solid var(--danger-main);
     border-radius: var(--radius-xl);
     padding: 1.75rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
 }
 
-.chef-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 100%;
-    background-color: var(--danger-main);
-}
+
 
 .chef-card-header {
     display: flex;
@@ -284,7 +276,7 @@ p.page-subtitle {
     font-size: 1rem;
     color: var(--danger-text);
     line-height: 1.65;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
 }
 
 .chef-card-body strong {
@@ -292,19 +284,6 @@ p.page-subtitle {
     text-decoration: underline;
     text-decoration-color: var(--danger-main);
     text-underline-offset: 3px;
-}
-
-.chef-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding-top: 1rem;
-    border-top: 1px dashed var(--danger-border);
-    font-size: 0.85rem;
-    color: var(--danger-text);
-    opacity: 0.9;
 }
 
 /* Section Layout */
@@ -335,18 +314,19 @@ p.page-subtitle {
 
 /* Search Filter */
 .search-container {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
     position: relative;
 }
 
 .search-input {
     width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    padding: 0.85rem 1rem 0.85rem 2.65rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border);
-    background-color: var(--surface-subtle);
+    background-color: var(--surface);
     color: var(--text-primary);
-    font-size: 0.925rem;
+    font-size: 0.95rem;
+    box-shadow: var(--shadow-sm);
     outline: none;
     font-family: inherit;
     transition: all 0.2s;
@@ -360,7 +340,7 @@ p.page-subtitle {
 
 .search-icon {
     position: absolute;
-    left: 0.85rem;
+    left: 0.95rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
@@ -390,12 +370,6 @@ p.page-subtitle {
     transform: translateY(-2px);
 }
 
-.nut-card-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .nut-name {
     font-weight: 700;
     font-size: 1rem;
@@ -406,17 +380,6 @@ p.page-subtitle {
     font-size: 0.8rem;
     color: var(--text-muted);
     line-height: 1.3;
-}
-
-.nut-status-badge {
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    background-color: var(--danger-badge-bg);
-    color: var(--danger-badge-text);
-    align-self: flex-start;
-    margin-top: 0.35rem;
 }
 
 /* Hidden Sources List */
@@ -487,21 +450,6 @@ p.page-subtitle {
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 1rem 1.15rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-@media (max-width: 640px) {
-    .clarify-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-.clarify-left {
-    flex: 1;
 }
 
 .clarify-title {
@@ -517,70 +465,7 @@ p.page-subtitle {
     line-height: 1.4;
 }
 
-.clarify-badge {
-    align-self: center;
-    white-space: nowrap;
-}
 
-@media (max-width: 640px) {
-    .clarify-badge {
-        align-self: flex-start;
-    }
-}
-
-/* Emergency Protocol Box */
-.emergency-card {
-    background-color: var(--warning-surface);
-    border: 1px solid var(--warning-border);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    margin-bottom: 1.75rem;
-}
-
-.emergency-title {
-    font-weight: 800;
-    font-size: 1.15rem;
-    color: var(--warning-text);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.emergency-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.step-box {
-    background-color: var(--surface);
-    border: 1px solid var(--warning-border);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-}
-
-.step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background-color: var(--warning-main);
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 0.75rem;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-.step-text {
-    font-size: 0.875rem;
-    color: var(--text-primary);
-    font-weight: 500;
-    line-height: 1.4;
-}
 
 
 
@@ -638,8 +523,7 @@ p.page-subtitle {
     }
 
     .chef-card-body,
-    .chef-card-title,
-    .chef-card-footer {
+    .chef-card-title {
         color: #000000 !important;
     }
 
@@ -651,8 +535,7 @@ p.page-subtitle {
 
     .nut-card,
     .source-box,
-    .clarify-item,
-    .step-box {
+    .clarify-item {
         border: 1px solid #e0e0e0 !important;
         background: #ffffff !important;
     }
