@@ -249,6 +249,10 @@ p.page-subtitle {
     color: var(--text-primary);
 }
 
+.section-title + .nut-grid {
+    margin-top: 0.75rem;
+}
+
 .section-desc {
     font-size: 0.925rem;
     color: var(--text-muted);
