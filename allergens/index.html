@@ -22,585 +22,563 @@
 
 <body>
 
-    <table class="print-layout">
-        <thead class="print-header-space">
-            <tr>
-                <td>
-                    <div class="print-spacer"></div>
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="container">
-                        <!-- Header Section -->
-                        <header class="header-section">
-                            <h1 class="page-title">Gideon Tong's Allergies</h1>
-                            <p class="page-subtitle">
-                                A quick reference for dining, catering, and event hosts.
-                            </p>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1 class="page-title">Gideon Tong's Allergies</h1>
+            <p class="page-subtitle">
+                A quick reference for dining, catering, and event hosts.
+            </p>
 
-                            <div class="action-bar">
-                                <button class="btn btn-secondary" onclick="window.print()">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="6 9 6 2 18 2 18 9" />
-                                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                                        <rect width="12" height="8" x="6" y="14" />
-                                    </svg>
-                                    Print PDF
-                                </button>
-                            </div>
-                            </header>
+            <div class="action-bar">
+                <button class="btn btn-secondary" onclick="window.print()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                        <rect width="12" height="8" x="6" y="14" />
+                    </svg>
+                    Print PDF
+                </button>
+            </div>
+            </header>
 
-                        <!-- Allergen Summary Card -->
-                        <div class="chef-card" id="chefCard">
-                            <div class="chef-card-header">
-                                <div class="chef-card-title">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <line x1="12" y1="8" x2="12" y2="12" />
-                                        <line x1="12" y1="16" x2="12.01" y2="16" />
-                                    </svg>
-                                    Allergen Summary
-                                </div>
-                            </div>
-                            <div class="chef-card-body" style="margin-bottom: 0;">
-                                I have an allergy to <strong>raw tree nuts</strong> (including almonds, pistachios,
-                                hazelnuts, pecans, and pine nuts) as well as <strong>powdered
-                                    spices</strong> (such as turmeric, paprika, and dry seasoning blends) and
-                                <strong>capsaicin</strong>.
-                            </div>
-                        </div>
+        <!-- Allergen Summary Card -->
+        <div class="chef-card" id="chefCard">
+            <div class="chef-card-header">
+                <div class="chef-card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    Allergen Summary
+                </div>
+            </div>
+            <div class="chef-card-body" style="margin-bottom: 0;">
+                I have an allergy to <strong>raw tree nuts</strong> (including almonds, pistachios,
+                hazelnuts, pecans, and pine nuts) as well as <strong>powdered
+                    spices</strong> (such as turmeric, paprika, and dry seasoning blends) and
+                <strong>capsaicin</strong>.
+            </div>
+        </div>
 
-                        <!-- Global Allergen Search Bar -->
-                        <div class="search-container">
-                            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8" />
-                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                            </svg>
-                            <input type="text" id="allergenSearch" class="search-input" placeholder="Search foods and allergens..."
-                                oninput="filterAllergens()">
-                            </div>
+        <!-- Global Allergen Search Bar -->
+        <div class="search-container">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="text" id="allergenSearch" class="search-input" placeholder="Search foods and allergens..."
+                oninput="filterAllergens()">
+            </div>
 
-                        <!-- Raw Tree Nuts Breakdown -->
-                        <section class="section-card allergen-section">
-                            <h2 class="section-title">
-                                Raw Tree Nuts
-                            </h2>
-                            <p class="section-desc">
-                                While raw and uncooked forms of these tree nuts need to be avoided, cooked (including
-                                roasted) nuts are
-                                perfectly okay:
-                                </p>
+        <!-- Raw Tree Nuts Breakdown -->
+        <section class="section-card allergen-section">
+            <h2 class="section-title">
+                Raw Tree Nuts
+            </h2>
+            <p class="section-desc">
+                While raw and uncooked forms of these tree nuts need to be avoided, cooked (including
+                roasted) nuts are
+                perfectly okay:
+            </p>
 
-                            <div class="nut-grid" id="nutGrid">
-                                <div class="nut-card"
-                                    data-keywords="raw almond almonds milk marzipan paste muesli granola trail mix salad toppings energy bar">
-                                    <span class="nut-name">Raw Almonds</span>
-                                    <span class="nut-alias">Marzipan, almond paste, almond milk, muesli, granola, trail
-                                        mix, salad
-                                        toppings, energy
-                                        bars</span>
-                                    </div>
-                                    <div class="nut-card"
-                                        data-keywords="raw walnut walnuts salad pesto waldorf oil muesli granola trail mix grain bowl cheese board">
-                                        <span class="nut-name">Raw Walnuts</span>
-                                    <span class="nut-alias">Waldorf salad, fresh pestos, grain bowls, muesli, granola,
-                                        trail mix,
-                                        cold-pressed oils, cheese
-                                        boards</span>
-                                    </div>
+            <div class="nut-grid" id="nutGrid">
+                <div class="nut-card"
+                    data-keywords="raw almond almonds milk marzipan paste muesli granola trail mix salad toppings energy bar">
+                    <span class="nut-name">Raw Almonds</span>
+                    <span class="nut-alias">Marzipan, almond paste, almond milk, muesli, granola, trail
+                        mix, salad
+                        toppings, energy
+                        bars</span>
+                </div>
+                <div class="nut-card"
+                    data-keywords="raw walnut walnuts salad pesto waldorf oil muesli granola trail mix grain bowl cheese board">
+                    <span class="nut-name">Raw Walnuts</span>
+                    <span class="nut-alias">Waldorf salad, fresh pestos, grain bowls, muesli, granola,
+                        trail mix,
+                        cold-pressed oils, cheese
+                        boards</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="raw cashew cashews vegan cheese cream cheesecake kaju paste smoothie trail mix energy ball dip">
-                                    <span class="nut-name">Raw Cashews</span>
-                                    <span class="nut-alias">Vegan cheeses & creams, unbaked cheesecakes, kaju paste &
-                                        sweets, smoothie
-                                        bowls, trail mix,
-                                        creamy dips</span>
-                                    </div>
-                                    <div class="nut-card"
-                                        data-keywords="raw pistachio pistachios paste gelato cannoli halva dessert pesto trail mix salad garnish">
-                                        <span class="nut-name">Raw Pistachios</span>
-                                    <span class="nut-alias">Pistachio paste, gelato & dessert garnishes, cannoli
-                                        fillings, halva, fresh
-                                        pestos, trail mix,
-                                        salad toppings</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="raw cashew cashews vegan cheese cream cheesecake kaju paste smoothie trail mix energy ball dip">
+                    <span class="nut-name">Raw Cashews</span>
+                    <span class="nut-alias">Vegan cheeses & creams, unbaked cheesecakes, kaju paste &
+                        sweets, smoothie
+                        bowls, trail mix,
+                        creamy dips</span>
+                </div>
+                <div class="nut-card"
+                    data-keywords="raw pistachio pistachios paste gelato cannoli halva dessert pesto trail mix salad garnish">
+                    <span class="nut-name">Raw Pistachios</span>
+                    <span class="nut-alias">Pistachio paste, gelato & dessert garnishes, cannoli
+                        fillings, halva, fresh
+                        pestos, trail mix,
+                        salad toppings</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="raw hazelnut hazelnuts filbert filberts spread gianduja praline muesli oil trail mix salad">
-                                    <span class="nut-name">Raw Hazelnuts / Filberts</span>
-                                    <span class="nut-alias">Gianduja & hazelnut spreads, praline paste, muesli,
-                                        cold-pressed oil, trail
-                                        mix, salad
-                                        garnishes</span>
-                                    </div>
-                                    <div class="nut-card" data-keywords="raw pecan pecans salad grain bowl muesli trail mix crust energy bar date bites">
-                                        <span class="nut-name">Raw Pecans</span>
-                                    <span class="nut-alias">Salad toppings, grain & smoothie bowls, muesli, trail mix,
-                                        unbaked pie
-                                        crusts, energy bars, date
-                                        bites</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="raw hazelnut hazelnuts filbert filberts spread gianduja praline muesli oil trail mix salad">
+                    <span class="nut-name">Raw Hazelnuts / Filberts</span>
+                    <span class="nut-alias">Gianduja & hazelnut spreads, praline paste, muesli,
+                        cold-pressed oil, trail
+                        mix, salad
+                        garnishes</span>
+                </div>
+                <div class="nut-card" data-keywords="raw pecan pecans salad grain bowl muesli trail mix crust energy bar date bites">
+                    <span class="nut-name">Raw Pecans</span>
+                    <span class="nut-alias">Salad toppings, grain & smoothie bowls, muesli, trail mix,
+                        unbaked pie
+                        crusts, energy bars, date
+                        bites</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="raw macadamia macadamias trail mix energy bar vegan cheese oil smoothie fruit salad">
-                                    <span class="nut-name">Raw Macadamia Nuts</span>
-                                    <span class="nut-alias">Trail mixes, unbaked energy bars, vegan cheeses,
-                                        cold-pressed oils, smoothie
-                                        garnishes, fruit
-                                        salads</span>
-                                    </div>
-                                    <div class="nut-card"
-                                        data-keywords="raw brazil nut brazil nuts trail mix nut butter muesli snack bar vegan parmesan salad">
-                                        <span class="nut-name">Raw Brazil Nuts</span>
-                                    <span class="nut-alias">Mixed trail mixes, nut butter blends, muesli, snack bars,
-                                        vegan parmesan
-                                        shavings, salad
-                                        toppers</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="raw macadamia macadamias trail mix energy bar vegan cheese oil smoothie fruit salad">
+                    <span class="nut-name">Raw Macadamia Nuts</span>
+                    <span class="nut-alias">Trail mixes, unbaked energy bars, vegan cheeses,
+                        cold-pressed oils, smoothie
+                        garnishes, fruit
+                        salads</span>
+                </div>
+                <div class="nut-card"
+                    data-keywords="raw brazil nut brazil nuts trail mix nut butter muesli snack bar vegan parmesan salad">
+                    <span class="nut-name">Raw Brazil Nuts</span>
+                    <span class="nut-alias">Mixed trail mixes, nut butter blends, muesli, snack bars,
+                        vegan parmesan
+                        shavings, salad
+                        toppers</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="raw pine nut pine nuts pignoli pinon fresh pesto basil salad hummus carpaccio pasta tapenade">
-                                    <span class="nut-name">Raw Pine Nuts (Pignoli)</span>
-                                    <span class="nut-alias">Fresh basil pestos, salad garnishes, hummus toppings,
-                                        carpaccio, cold pasta
-                                        salads,
-                                        tapenades</span>
-                                    </div>
-                                    <div class="nut-card" data-keywords="raw chestnut chestnuts puree dessert cream salad flour">
-                                        <span class="nut-name">Raw Chestnuts</span>
-                                    <span class="nut-alias">Chestnut purees, unheated dessert creams, shaved salad
-                                        garnishes, specialty
-                                        flour blends</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="raw pine nut pine nuts pignoli pinon fresh pesto basil salad hummus carpaccio pasta tapenade">
+                    <span class="nut-name">Raw Pine Nuts (Pignoli)</span>
+                    <span class="nut-alias">Fresh basil pestos, salad garnishes, hummus toppings,
+                        carpaccio, cold pasta
+                        salads,
+                        tapenades</span>
+                </div>
+                <div class="nut-card" data-keywords="raw chestnut chestnuts puree dessert cream salad flour">
+                    <span class="nut-name">Raw Chestnuts</span>
+                    <span class="nut-alias">Chestnut purees, unheated dessert creams, shaved salad
+                        garnishes, specialty
+                        flour blends</span>
+                </div>
 
-                                <div class="nut-card" data-keywords="raw hickory nut hickory nuts foraged wild nut mix butter trail mix salad porridge">
-                                    <span class="nut-name">Raw Hickory Nuts</span>
-                                    <span class="nut-alias">Foraged wild nut mixes, specialty nut butters, trail mixes,
-                                        salad garnishes,
-                                        porridge
-                                        toppings</span>
-                                    </div>
-                                    <div class="nut-card"
-                                        data-keywords="raw beech nut beechnut pili nut ginkgo chinquapin keto snack butter trail mix garnish">
-                                        <span class="nut-name">Other Raw Tree Nuts</span>
-                                    <span class="nut-alias">Pili nut snacks & keto butters, foraged trail mixes,
-                                        specialty nut oils,
-                                        dessert & soup
-                                        garnishes</span>
-                                    </div>
-                                    </div>
-                                    <p class="no-items-found" id="noNutsFound"
-                                        style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
-                                        No matching raw tree nuts found for your search.
-                                    </p>
-                                    </section>
+                <div class="nut-card" data-keywords="raw hickory nut hickory nuts foraged wild nut mix butter trail mix salad porridge">
+                    <span class="nut-name">Raw Hickory Nuts</span>
+                    <span class="nut-alias">Foraged wild nut mixes, specialty nut butters, trail mixes,
+                        salad garnishes,
+                        porridge
+                        toppings</span>
+                </div>
+                <div class="nut-card"
+                    data-keywords="raw beech nut beechnut pili nut ginkgo chinquapin keto snack butter trail mix garnish">
+                    <span class="nut-name">Other Raw Tree Nuts</span>
+                    <span class="nut-alias">Pili nut snacks & keto butters, foraged trail mixes,
+                        specialty nut oils,
+                        dessert & soup
+                        garnishes</span>
+                </div>
+                </div>
+                <p class="no-items-found" id="noNutsFound"
+                    style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
+                    No matching raw tree nuts found for your search.
+                </p>
+                </section>
 
-                        <!-- Capsaicin Breakdown -->
-                        <section class="section-card allergen-section">
-                            <h2 class="section-title">
-                                Capsaicin
-                            </h2>
-                            <p class="section-desc">
-                                Please avoid hot peppers, chili-derived products, and capsaicin-containing foods:
-                            </p>
+        <!-- Capsaicin Breakdown -->
+        <section class="section-card allergen-section">
+            <h2 class="section-title">
+                Capsaicin
+            </h2>
+            <p class="section-desc">
+                Please avoid hot peppers, chili-derived products, and capsaicin-containing foods:
+            </p>
 
-                            <div class="nut-grid" id="capsaicinGrid">
-                                <div class="nut-card"
-                                    data-keywords="hot pepper chili peppers jalapeno habanero serrano bird eye salsa guacamole curry ceviche stir fry marinade relish">
-                                    <span class="nut-name">Hot & Chili Peppers</span>
-                                    <span class="nut-alias">Fresh salsas, guacamole, spicy stir-fries, curries, ceviche,
-                                        pepper
-                                        relishes, spicy
-                                        marinades</span>
-                                    </div>
+            <div class="nut-grid" id="capsaicinGrid">
+                <div class="nut-card"
+                    data-keywords="hot pepper chili peppers jalapeno habanero serrano bird eye salsa guacamole curry ceviche stir fry marinade relish">
+                    <span class="nut-name">Hot & Chili Peppers</span>
+                    <span class="nut-alias">Fresh salsas, guacamole, spicy stir-fries, curries, ceviche,
+                        pepper
+                        relishes, spicy
+                        marinades</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="hot sauce sriracha tabasco sambal harissa gochujang buffalo sauce chili paste chili crisp peri peri">
-                                    <span class="nut-name">Hot Sauces & Chili Pastes</span>
-                                    <span class="nut-alias">Sriracha, Tabasco, sambal oelek, harissa, gochujang, buffalo
-                                        wing sauce,
-                                        chili crisp,
-                                        peri-peri</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="hot sauce sriracha tabasco sambal harissa gochujang buffalo sauce chili paste chili crisp peri peri">
+                    <span class="nut-name">Hot Sauces & Chili Pastes</span>
+                    <span class="nut-alias">Sriracha, Tabasco, sambal oelek, harissa, gochujang, buffalo
+                        wing sauce,
+                        chili crisp,
+                        peri-peri</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="cayenne pepper crushed red pepper flakes chili powder pizza arrabbiata dry rubs seasoning chili con carne">
-                                    <span class="nut-name">Chili Flakes & Cayenne</span>
-                                    <span class="nut-alias">Pizza seasoning flakes, arrabbiata pasta, chili con carne,
-                                        spicy dry rubs,
-                                        seasoned fries &
-                                        snacks</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="cayenne pepper crushed red pepper flakes chili powder pizza arrabbiata dry rubs seasoning chili con carne">
+                    <span class="nut-name">Chili Flakes & Cayenne</span>
+                    <span class="nut-alias">Pizza seasoning flakes, arrabbiata pasta, chili con carne,
+                        spicy dry rubs,
+                        seasoned fries &
+                        snacks</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="chili oil infused oil spicy drizzle rayu hot honey chili crisp dipping oil chili butter">
-                                    <span class="nut-name">Chili Oils & Infusions</span>
-                                    <span class="nut-alias">Chili crisp oil, spicy infused olive oils, hot honey
-                                        drizzle, rayu, spicy
-                                        dipping oils, chili
-                                        butter</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="chili oil infused oil spicy drizzle rayu hot honey chili crisp dipping oil chili butter">
+                    <span class="nut-name">Chili Oils & Infusions</span>
+                    <span class="nut-alias">Chili crisp oil, spicy infused olive oils, hot honey
+                        drizzle, rayu, spicy
+                        dipping oils, chili
+                        butter</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="oleoresin capsicum chili extract flaming hot chips wing sauces marinades snacks sausages">
-                                    <span class="nut-name">Capsicum Extracts & Oleoresin</span>
-                                    <span class="nut-alias">Flaming hot chips & snacks, ultra-spicy wing sauces,
-                                        processed spicy
-                                        marinades, spicy
-                                        sausages</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="oleoresin capsicum chili extract flaming hot chips wing sauces marinades snacks sausages">
+                    <span class="nut-name">Capsicum Extracts & Oleoresin</span>
+                    <span class="nut-alias">Flaming hot chips & snacks, ultra-spicy wing sauces,
+                        processed spicy
+                        marinades, spicy
+                        sausages</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="spicy curries thai curry sichuan spicy kimchi ramen hot pot tom yum enchiladas broth">
-                                    <span class="nut-name">Spicy Dishes & Broths</span>
-                                    <span class="nut-alias">Thai curries, Sichuan mala dishes, kimchi jjigae, spicy
-                                        ramen with rayu, tom
-                                        yum,
-                                        enchiladas</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="spicy curries thai curry sichuan spicy kimchi ramen hot pot tom yum enchiladas broth">
+                    <span class="nut-name">Spicy Dishes & Broths</span>
+                    <span class="nut-alias">Thai curries, Sichuan mala dishes, kimchi jjigae, spicy
+                        ramen with rayu, tom
+                        yum,
+                        enchiladas</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="bell pepper sweet pepper pimento banana pepper paprika capsicum fajitas romesco cheese paella piperade">
-                                    <span class="nut-name">Sweet Peppers & Paprika</span>
-                                    <span class="nut-alias">Fajitas, stuffed bell peppers, romesco sauce, pimento
-                                        cheese, sweet pepper
-                                        dips, paella</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="bell pepper sweet pepper pimento banana pepper paprika capsicum fajitas romesco cheese paella piperade">
+                    <span class="nut-name">Sweet Peppers & Paprika</span>
+                    <span class="nut-alias">Fajitas, stuffed bell peppers, romesco sauce, pimento
+                        cheese, sweet pepper
+                        dips, paella</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="spicy rubs seasoning blends blackened seasoning cajun fajita taco spice nashville hot bbq">
-                                    <span class="nut-name">Spicy Seasonings & Rubs</span>
-                                    <span class="nut-alias">Cajun seasonings, blackened fish & chicken rubs, spicy taco
-                                        spice, Nashville
-                                        hot chicken, BBQ
-                                        rubs</span>
-                                    </div>
-                                    </div>
-                                    <p class="no-items-found" id="noCapsaicinFound"
-                                        style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
-                                        No matching capsaicin sources found for your search.
-                                    </p>
-                                    </section>
+                <div class="nut-card"
+                    data-keywords="spicy rubs seasoning blends blackened seasoning cajun fajita taco spice nashville hot bbq">
+                    <span class="nut-name">Spicy Seasonings & Rubs</span>
+                    <span class="nut-alias">Cajun seasonings, blackened fish & chicken rubs, spicy taco
+                        spice, Nashville
+                        hot chicken, BBQ
+                        rubs</span>
+                </div>
+                </div>
+                <p class="no-items-found" id="noCapsaicinFound"
+                    style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
+                    No matching capsaicin sources found for your search.
+                </p>
+                </section>
 
-                        <!-- Powdered Spices Breakdown -->
-                        <section class="section-card allergen-section">
-                            <h2 class="section-title">
-                                Powdered Spices
-                            </h2>
+        <!-- Powdered Spices Breakdown -->
+        <section class="section-card allergen-section">
+            <h2 class="section-title">
+                Powdered Spices
+            </h2>
 
-                            <div class="nut-grid" id="spiceGrid">
-                                <div class="nut-card" data-keywords="turmeric haldi golden milk yellow curry latte rice mustard soup broth">
-                                    <span class="nut-name">Turmeric</span>
-                                    <span class="nut-alias">Golden milk lattes, yellow curries, turmeric rice, prepared
-                                        yellow mustard,
-                                        spiced soups &
-                                        broths</span>
-                                    </div>
+            <div class="nut-grid" id="spiceGrid">
+                <div class="nut-card" data-keywords="turmeric haldi golden milk yellow curry latte rice mustard soup broth">
+                    <span class="nut-name">Turmeric</span>
+                    <span class="nut-alias">Golden milk lattes, yellow curries, turmeric rice, prepared
+                        yellow mustard,
+                        spiced soups &
+                        broths</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="paprika smoked sweet hot pimenton bbq dry rubs fries chips deviled eggs chorizo goulash paella">
-                                    <span class="nut-name">Paprika</span>
-                                    <span class="nut-alias">BBQ dry rubs, seasoned fries & chips, deviled eggs, Spanish
-                                        chorizo,
-                                        goulash, paella
-                                        seasoning</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="paprika smoked sweet hot pimenton bbq dry rubs fries chips deviled eggs chorizo goulash paella">
+                    <span class="nut-name">Paprika</span>
+                    <span class="nut-alias">BBQ dry rubs, seasoned fries & chips, deviled eggs, Spanish
+                        chorizo,
+                        goulash, paella
+                        seasoning</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="chili powder cayenne red pepper ancho chipotle taco fajita enchilada marinade dry rubs">
-                                    <span class="nut-name">Chili Powder & Cayenne</span>
-                                    <span class="nut-alias">Taco & fajita seasonings, chili con carne, enchilada sauce,
-                                        dry meat rubs,
-                                        spicy
-                                        marinades</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="chili powder cayenne red pepper ancho chipotle taco fajita enchilada marinade dry rubs">
+                    <span class="nut-name">Chili Powder & Cayenne</span>
+                    <span class="nut-alias">Taco & fajita seasonings, chili con carne, enchilada sauce,
+                        dry meat rubs,
+                        spicy
+                        marinades</span>
+                </div>
 
-                                <div class="nut-card" data-keywords="cumin ground jeera taco seasoning chili curry falafel hummus garam masala">
-                                    <span class="nut-name">Cumin (Ground)</span>
-                                    <span class="nut-alias">Taco seasonings, chili con carne, curry powders, falafel
-                                        spice, hummus
-                                        seasonings, garam
-                                        masala</span>
-                                    </div>
+                <div class="nut-card" data-keywords="cumin ground jeera taco seasoning chili curry falafel hummus garam masala">
+                    <span class="nut-name">Cumin (Ground)</span>
+                    <span class="nut-alias">Taco seasonings, chili con carne, curry powders, falafel
+                        spice, hummus
+                        seasonings, garam
+                        masala</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="coriander ground dhania curry powder garam masala biryani falafel dry rubs sausage">
-                                    <span class="nut-name">Coriander (Ground)</span>
-                                    <span class="nut-alias">Curry powders, garam masala, biryani seasonings, falafel
-                                        spice, dry BBQ
-                                        rubs, sausage
-                                        seasoning</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="coriander ground dhania curry powder garam masala biryani falafel dry rubs sausage">
+                    <span class="nut-name">Coriander (Ground)</span>
+                    <span class="nut-alias">Curry powders, garam masala, biryani seasonings, falafel
+                        spice, dry BBQ
+                        rubs, sausage
+                        seasoning</span>
+                </div>
 
-                                <div class="nut-card" data-keywords="garlic powder granulated garlic salt garlic bread ranch dressing dry rubs chips">
-                                    <span class="nut-name">Garlic Powder</span>
-                                    <span class="nut-alias">Garlic bread seasonings, seasoned fries, ranch dressing mix,
-                                        dry BBQ rubs,
-                                        seasoned snack
-                                        chips</span>
-                                    </div>
+                <div class="nut-card" data-keywords="garlic powder granulated garlic salt garlic bread ranch dressing dry rubs chips">
+                    <span class="nut-name">Garlic Powder</span>
+                    <span class="nut-alias">Garlic bread seasonings, seasoned fries, ranch dressing mix,
+                        dry BBQ rubs,
+                        seasoned snack
+                        chips</span>
+                </div>
 
-                                <div class="nut-card" data-keywords="onion powder granulated onion chips dip ranch dressings spice rubs soups">
-                                    <span class="nut-name">Onion Powder</span>
-                                    <span class="nut-alias">Potato chips, French onion dip mix, ranch dressing mix, dry
-                                        spice rubs,
-                                        seasoned coatings &
-                                        soups</span>
-                                    </div>
+                <div class="nut-card" data-keywords="onion powder granulated onion chips dip ranch dressings spice rubs soups">
+                    <span class="nut-name">Onion Powder</span>
+                    <span class="nut-alias">Potato chips, French onion dip mix, ranch dressing mix, dry
+                        spice rubs,
+                        seasoned coatings &
+                        soups</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="curry powder garam masala ras el hanout five spice shawarma blends taco fajita bbq rubs">
-                                    <span class="nut-name">Curry Powder & Spice Blends</span>
-                                    <span class="nut-alias">Garam masala, madras curry blends, taco & fajita mixes,
-                                        shawarma spice, ras
-                                        el hanout, BBQ
-                                        rubs</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="curry powder garam masala ras el hanout five spice shawarma blends taco fajita bbq rubs">
+                    <span class="nut-name">Curry Powder & Spice Blends</span>
+                    <span class="nut-alias">Garam masala, madras curry blends, taco & fajita mixes,
+                        shawarma spice, ras
+                        el hanout, BBQ
+                        rubs</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="mustard powder dry mustard condiment mac cheese rubs salad dressing bbq sauce fondue">
-                                    <span class="nut-name">Mustard Powder</span>
-                                    <span class="nut-alias">Mac & cheese seasonings, dry spice rubs, salad dressing
-                                        mixes, barbecue
-                                        sauces, cheese
-                                        fondues</span>
-                                    </div>
+                <div class="nut-card"
+                    data-keywords="mustard powder dry mustard condiment mac cheese rubs salad dressing bbq sauce fondue">
+                    <span class="nut-name">Mustard Powder</span>
+                    <span class="nut-alias">Mac & cheese seasonings, dry spice rubs, salad dressing
+                        mixes, barbecue
+                        sauces, cheese
+                        fondues</span>
+                </div>
 
-                                <div class="nut-card" data-keywords="cinnamon ground chai pumpkin spice apple pie oatmeal tagine baking savory spice">
-                                    <span class="nut-name">Cinnamon (Ground)</span>
-                                    <span class="nut-alias">Cinnamon sugar, pumpkin pie spice, chai blends, apple pie
-                                        seasonings,
-                                        Moroccan tagines, spiced
-                                        oatmeal</span>
-                                    </div>
+                <div class="nut-card" data-keywords="cinnamon ground chai pumpkin spice apple pie oatmeal tagine baking savory spice">
+                    <span class="nut-name">Cinnamon (Ground)</span>
+                    <span class="nut-alias">Cinnamon sugar, pumpkin pie spice, chai blends, apple pie
+                        seasonings,
+                        Moroccan tagines, spiced
+                        oatmeal</span>
+                </div>
 
-                                <div class="nut-card"
-                                    data-keywords="cardamom cloves allspice fenugreek sumac chai gingerbread zaatar five spice pickling">
-                                    <span class="nut-name">Other Powdered Spices</span>
-                                    <span class="nut-alias">Chai spice blends, gingerbread spices, za'atar, allspice
-                                        seasoning, Chinese
-                                        five-spice, pickling
-                                        powders</span>
-                                    </div>
-                                    </div>
-                                    <p class="no-items-found" id="noSpicesFound"
-                                        style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
-                                        No matching powdered spices found for your search.
-                                    </p>
-                                    </section>
+                <div class="nut-card"
+                    data-keywords="cardamom cloves allspice fenugreek sumac chai gingerbread zaatar five spice pickling">
+                    <span class="nut-name">Other Powdered Spices</span>
+                    <span class="nut-alias">Chai spice blends, gingerbread spices, za'atar, allspice
+                        seasoning, Chinese
+                        five-spice, pickling
+                        powders</span>
+                </div>
+                </div>
+                <p class="no-items-found" id="noSpicesFound"
+                    style="display: none; text-align: center; color: var(--text-muted); padding: 1.5rem 0;">
+                    No matching powdered spices found for your search.
+                </p>
+                </section>
 
-                        <!-- Common Dishes -->
-                        <section class="section-card">
-                            <h2 class="section-title">
-                                Common Dishes
-                            </h2>
-                            <p class="section-desc">
-                                Common culinary preparations where raw tree nuts, powdered spices, and capsaicin are
-                                frequently present:
-                                </p>
+        <!-- Common Dishes -->
+        <section class="section-card print-page-break">
+            <h2 class="section-title">
+                Common Dishes
+            </h2>
+            <p class="section-desc">
+                Common culinary preparations where raw tree nuts, powdered spices, and capsaicin are
+                frequently present:
+            </p>
 
-                            <div class="hidden-sources-grid">
-                                <div class="source-box">
-                                    <div class="source-category">
-                                        Raw Nut Dishes & Garnishes
-                                    </div>
-                                    <ul class="source-items">
-                                        <li><strong>Salad & Grain Bowls:</strong> Raw walnuts, pecans, or slivered
-                                            almonds tossed in
-                                            salads and smoothie bowls.
-                                        </li>
-                                        <li><strong>Fresh Pestos & Cold Dips:</strong> Uncooked pine nut or walnut
-                                            pestos, cold romesco,
-                                            raw nut garnishes.</li>
-                                        <li><strong>Raw Vegan Cheeses & Creams:</strong> Unheated cashew cheese, raw
-                                            almond ricotta
-                                            dips, cold-pressed oils.
-                                        </li>
-                                        <li><strong>Unbaked Desserts & Confections:</strong> Energy date/nut bars,
-                                            unbaked raw cashew
-                                            cheesecake crusts, unbaked
-                                            marzipan.</li>
-                                        </ul>
-                                        </div>
+            <div class="hidden-sources-grid">
+                <div class="source-box">
+                    <div class="source-category">
+                        Raw Nut Dishes & Garnishes
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Salad & Grain Bowls:</strong> Raw walnuts, pecans, or slivered
+                            almonds tossed in
+                            salads and smoothie bowls.
+                        </li>
+                        <li><strong>Fresh Pestos & Cold Dips:</strong> Uncooked pine nut or walnut
+                            pestos, cold romesco,
+                            raw nut garnishes.</li>
+                        <li><strong>Raw Vegan Cheeses & Creams:</strong> Unheated cashew cheese, raw
+                            almond ricotta
+                            dips, cold-pressed oils.
+                        </li>
+                        <li><strong>Unbaked Desserts & Confections:</strong> Energy date/nut bars,
+                            unbaked raw cashew
+                            cheesecake crusts, unbaked
+                            marzipan.</li>
+                    </ul>
+                </div>
 
-                                <div class="source-box">
-                                    <div class="source-category">
-                                        Powdered Spices & Seasonings
-                                    </div>
-                                    <ul class="source-items">
-                                        <li><strong>Curries, Soups & Stews:</strong> Golden milk, yellow curries, and
-                                            broths flavored
-                                            with turmeric, cumin, or
-                                            coriander.</li>
-                                        <li><strong>Dry Rubs & Seasoning Blends:</strong> BBQ rubs, taco seasonings,
-                                            fajita mixes, and
-                                            dry spice blends.</li>
-                                        <li><strong>Seasoned Snacks & Sides:</strong> Paprika-dusted fries, seasoned
-                                            potato chips,
-                                            spiced popcorn.</li>
-                                        <li><strong>Dressings & Marinades:</strong> Ranch dressing mixes, spice-infused
-                                            vinaigrettes,
-                                            and dry powder marinades.
-                                        </li>
-                                        </ul>
-                                        </div>
+                <div class="source-box">
+                    <div class="source-category">
+                        Powdered Spices & Seasonings
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Curries, Soups & Stews:</strong> Golden milk, yellow curries, and
+                            broths flavored
+                            with turmeric, cumin, or
+                            coriander.</li>
+                        <li><strong>Dry Rubs & Seasoning Blends:</strong> BBQ rubs, taco seasonings,
+                            fajita mixes, and
+                            dry spice blends.</li>
+                        <li><strong>Seasoned Snacks & Sides:</strong> Paprika-dusted fries, seasoned
+                            potato chips,
+                            spiced popcorn.</li>
+                        <li><strong>Dressings & Marinades:</strong> Ranch dressing mixes, spice-infused
+                            vinaigrettes,
+                            and dry powder marinades.
+                        </li>
+                    </ul>
+                </div>
 
-                                <div class="source-box">
-                                    <div class="source-category">
-                                        Capsaicin & Spicy Foods
-                                    </div>
-                                    <ul class="source-items">
-                                        <li><strong>Hot Sauces & Condiments:</strong> Sriracha, Tabasco, sambal oelek,
-                                            harissa, chili
-                                            crisp, buffalo sauce.</li>
-                                        <li><strong>Spicy Regional Dishes:</strong> Thai spicy curries, Sichuan chili
-                                            oil dishes, spicy
-                                            salsas, enchiladas.</li>
-                                        <li><strong>Spicy Broths & Noodles:</strong> Spicy ramen with rayu, kimchi
-                                            jjigae, spicy hot pot
-                                            broths.</li>
-                                        <li><strong>Spicy Glazes & Drizzles:</strong> Hot honey drizzle, sweet chili
-                                            glazes, spicy BBQ
-                                            wings.</li>
-                                        </ul>
-                                        </div>
+                <div class="source-box">
+                    <div class="source-category">
+                        Capsaicin & Spicy Foods
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Hot Sauces & Condiments:</strong> Sriracha, Tabasco, sambal oelek,
+                            harissa, chili
+                            crisp, buffalo sauce.</li>
+                        <li><strong>Spicy Regional Dishes:</strong> Thai spicy curries, Sichuan chili
+                            oil dishes, spicy
+                            salsas, enchiladas.</li>
+                        <li><strong>Spicy Broths & Noodles:</strong> Spicy ramen with rayu, kimchi
+                            jjigae, spicy hot pot
+                            broths.</li>
+                        <li><strong>Spicy Glazes & Drizzles:</strong> Hot honey drizzle, sweet chili
+                            glazes, spicy BBQ
+                            wings.</li>
+                    </ul>
+                </div>
 
-                                <div class="source-box">
-                                    <div class="source-category">
-                                        Sauces, Salsas & Mixed Blends
-                                    </div>
-                                    <ul class="source-items">
-                                        <li><strong>Fresh & Cooked Salsas:</strong> Salsas containing jalapeños, chili
-                                            powders, and
-                                            ground cumin.</li>
-                                        <li><strong>Mole & Multi-Spice Sauces:</strong> Rich specialty sauces combining
-                                            chili peppers,
-                                            spices, and nuts.</li>
-                                        <li><strong>Asian Stir-Fry Sauces:</strong> Pad Thai sauces, chili garlic
-                                            pastes, and prepared
-                                            curry pastes.</li>
-                                        <li><strong>Charcuterie & Snack Trays:</strong> Spiced cured meats,
-                                            chili-infused cheeses,
-                                            seasoned crackers.</li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        </section>
+                <div class="source-box">
+                    <div class="source-category">
+                        Sauces, Salsas & Mixed Blends
+                    </div>
+                    <ul class="source-items">
+                        <li><strong>Fresh & Cooked Salsas:</strong> Salsas containing jalapeños, chili
+                            powders, and
+                            ground cumin.</li>
+                        <li><strong>Mole & Multi-Spice Sauces:</strong> Rich specialty sauces combining
+                            chili peppers,
+                            spices, and nuts.</li>
+                        <li><strong>Asian Stir-Fry Sauces:</strong> Pad Thai sauces, chili garlic
+                            pastes, and prepared
+                            curry pastes.</li>
+                        <li><strong>Charcuterie & Snack Trays:</strong> Spiced cured meats,
+                            chili-infused cheeses,
+                            seasoned crackers.</li>
+                    </ul>
+                </div>
+                </div>
+                </section>
 
-                        <!-- Common Clarifications -->
-                        <section class="section-card">
-                            <h2 class="section-title">
-                                Common Distinctions & Clarifications
-                            </h2>
-                            <p class="section-desc">
-                                Key distinctions regarding raw nuts, spice forms, peppers, seeds, and commonly confused
-                                ingredients:
-                                </p>
+        <!-- Common Clarifications -->
+        <section class="section-card">
+            <h2 class="section-title">
+                Common Distinctions & Clarifications
+            </h2>
+            <p class="section-desc">
+                Key distinctions regarding raw nuts, spice forms, peppers, seeds, and commonly confused
+                ingredients:
+            </p>
 
-                            <div class="clarify-grid">
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Raw vs. Baked / Cooked Nuts</div>
-                                    <div class="clarify-desc">The tree nut allergy specifically applies to raw and
-                                        uncooked tree nuts
-                                        (such as fresh raw
-                                        nut garnishes, uncooked pestos, and unbaked vegan cashew creams).</div>
-                                    </div>
+            <div class="clarify-grid">
+                <div class="clarify-item">
+                    <div class="clarify-title">Raw vs. Baked / Cooked Nuts</div>
+                    <div class="clarify-desc">The tree nut allergy specifically applies to raw and
+                        uncooked tree nuts
+                        (such as fresh raw
+                        nut garnishes, uncooked pestos, and unbaked vegan cashew creams).</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Fresh Aromatics vs. Powdered Spices</div>
-                                    <div class="clarify-desc">The spice restriction focuses on dry ground/powdered
-                                        spices and seasoning
-                                        blends. Fresh
-                                        whole garlic cloves and fresh onions are distinct from dehydrated powders.</div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Fresh Aromatics vs. Powdered Spices</div>
+                    <div class="clarify-desc">The spice restriction focuses on dry ground/powdered
+                        spices and seasoning
+                        blends. Fresh
+                        whole garlic cloves and fresh onions are distinct from dehydrated powders.</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Black & White Peppercorns vs. Capsaicin</div>
-                                    <div class="clarify-desc">Table black, white, and green peppercorns (Piper nigrum)
-                                        contain piperine,
-                                        not capsaicin,
-                                        and are biologically unrelated to Capsicum chili peppers (jalapeños, cayenne,
-                                        paprika).</div>
-                                        </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Black & White Peppercorns vs. Capsaicin</div>
+                    <div class="clarify-desc">Table black, white, and green peppercorns (Piper nigrum)
+                        contain piperine,
+                        not capsaicin,
+                        and are biologically unrelated to Capsicum chili peppers (jalapeños, cayenne,
+                        paprika).</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Pink Peppercorns (Cashew Family)</div>
-                                    <div class="clarify-desc">Pink peppercorns are dried berries from the Brazilian
-                                        pepper tree (Schinus
-                                        terebinthifolia), which belongs to the cashew family (Anacardiaceae) and should
-                                        be avoided.
-                                    </div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Pink Peppercorns (Cashew Family)</div>
+                    <div class="clarify-desc">Pink peppercorns are dried berries from the Brazilian
+                        pepper tree (Schinus
+                        terebinthifolia), which belongs to the cashew family (Anacardiaceae) and should
+                        be avoided.
+                    </div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Sichuan Peppercorns</div>
-                                    <div class="clarify-desc">Sichuan peppercorns are the husks of prickly ash shrubs
-                                        (citrus family)
-                                        and produce a
-                                        numbing sensation from hydroxy-alpha-sanshool, containing no capsaicin.</div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Sichuan Peppercorns</div>
+                    <div class="clarify-desc">Sichuan peppercorns are the husks of prickly ash shrubs
+                        (citrus family)
+                        and produce a
+                        numbing sensation from hydroxy-alpha-sanshool, containing no capsaicin.</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Fresh Herbs & Leafy Greens</div>
-                                    <div class="clarify-desc">Fresh culinary herbs (such as fresh basil, cilantro,
-                                        parsley, rosemary,
-                                        thyme, and mint)
-                                        are fresh leafy produce and are distinct from dry powdered seasoning blends.
-                                        </div>
-                                        </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Fresh Herbs & Leafy Greens</div>
+                    <div class="clarify-desc">Fresh culinary herbs (such as fresh basil, cilantro,
+                        parsley, rosemary,
+                        thyme, and mint)
+                        are fresh leafy produce and are distinct from dry powdered seasoning blends.
+                    </div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Peanuts</div>
-                                    <div class="clarify-desc">Peanuts are legumes (grow underground), not botanical tree
-                                        nuts. However,
-                                        cross-contact risk
-                                        can occur in shared processing facilities.</div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Peanuts</div>
+                    <div class="clarify-desc">Peanuts are legumes (grow underground), not botanical tree
+                        nuts. However,
+                        cross-contact risk
+                        can occur in shared processing facilities.</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Coconut</div>
-                                    <div class="clarify-desc">Botanically a drupe / fibrous one-seeded fruit. Classified
-                                        as a tree nut
-                                        by US FDA for
-                                        labeling, but biologically distinct from true tree nuts.</div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Coconut</div>
+                    <div class="clarify-desc">Botanically a drupe / fibrous one-seeded fruit. Classified
+                        as a tree nut
+                        by US FDA for
+                        labeling, but biologically distinct from true tree nuts.</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Seeds (Sesame, Sunflower, Pumpkin, Chia)</div>
-                                    <div class="clarify-desc">Culinary seeds (sesame, sunflower, pumpkin, chia, flax,
-                                        poppy) are
-                                        botanically distinct from
-                                        tree nuts and are generally separate unless processed on shared machinery.</div>
-                                    </div>
+                <div class="clarify-item">
+                    <div class="clarify-title">Seeds (Sesame, Sunflower, Pumpkin, Chia)</div>
+                    <div class="clarify-desc">Culinary seeds (sesame, sunflower, pumpkin, chia, flax,
+                        poppy) are
+                        botanically distinct from
+                        tree nuts and are generally separate unless processed on shared machinery.</div>
+                </div>
 
-                                <div class="clarify-item">
-                                    <div class="clarify-title">Nutmeg, Butternut Squash & Water Chestnuts</div>
-                                    <div class="clarify-desc">Nutmeg is a spice seed (Myristica fragrans); Water
-                                        chestnuts are aquatic
-                                        tubers; Butternut is
-                                        a squash vegetable. None are botanical tree nuts.</div>
-                                    </div>
-                                    </div>
-                                    </section>
-                                    </div>
-                </td>
-                </tr>
-                </tbody>
-                <tfoot class="print-footer-space">
-                    <tr>
-                        <td>
-                            <div class="print-spacer"></div>
-                        </td>
-                    </tr>
-                </tfoot>
-                </table>
+                <div class="clarify-item">
+                    <div class="clarify-title">Nutmeg, Butternut Squash & Water Chestnuts</div>
+                    <div class="clarify-desc">Nutmeg is a spice seed (Myristica fragrans); Water
+                        chestnuts are aquatic
+                        tubers; Butternut is
+                        a squash vegetable. None are botanical tree nuts.</div>
+                </div>
+                </div>
+                </section>
+                </div>
 
     <script>
         // Live Filter for Tree Nuts, Powdered Spices, and Capsaicin

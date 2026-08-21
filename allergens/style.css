@@ -416,31 +416,6 @@ p.page-subtitle {
 
 
 
-/* Print Layout Table Screen Reset */
-table.print-layout {
-    width: 100%;
-    border-collapse: collapse;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-table.print-layout,
-table.print-layout > tbody,
-table.print-layout > tbody > tr,
-table.print-layout > tbody > tr > td {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-table.print-layout > thead,
-table.print-layout > tfoot {
-    display: none;
-}
-
 /* Print Specific Styling */
 @page {
     margin: 0;
@@ -465,8 +440,8 @@ table.print-layout > tfoot {
     }
 
     body {
-        font-size: 9.5pt;
-        line-height: 1.45;
+        font-size: 9pt;
+        line-height: 1.4;
     }
 
     .action-bar,
@@ -474,69 +449,28 @@ table.print-layout > tfoot {
         display: none !important;
     }
 
-    /* Print Pagination Table Structure - Creates Uniform Margin on EVERY Page */
-    table.print-layout {
-        display: table !important;
-        width: 100% !important;
-        border-collapse: collapse !important;
-        border: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    table.print-layout > thead {
-        display: table-header-group !important;
-    }
-
-    table.print-layout > tfoot {
-        display: table-footer-group !important;
-    }
-
-    table.print-layout > tbody {
-        display: table-row-group !important;
-    }
-
-    table.print-layout > tbody > tr {
-        display: table-row !important;
-    }
-
-    table.print-layout > tbody > tr > td {
-        display: table-cell !important;
-        padding: 0 16mm !important; /* Left & right margin on every page */
-        border: none !important;
-        vertical-align: top !important;
-    }
-
-    .print-header-space .print-spacer {
-        display: block !important;
-        height: 16mm !important; /* Top margin on every page */
-    }
-
-    .print-footer-space .print-spacer {
-        display: block !important;
-        height: 16mm !important; /* Bottom margin on every page */
-    }
-
     .container {
         max-width: 100% !important;
         width: 100% !important;
-        padding: 0 !important;
         margin: 0 !important;
+        padding: 12mm 15mm 0 15mm !important;
+        box-sizing: border-box !important;
     }
 
     .header-section {
-        margin-bottom: 1.25rem !important;
+        text-align: center !important;
+        margin-bottom: 0.75rem !important;
     }
 
     h1.page-title {
-        font-size: 1.75rem !important;
-        margin-bottom: 0.25rem !important;
+        font-size: 1.6rem !important;
+        margin-bottom: 0.2rem !important;
         color: #000000 !important;
     }
 
     p.page-subtitle {
-        font-size: 0.95rem !important;
-        margin-bottom: 0 !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 0.4rem !important;
         color: #475569 !important;
         max-width: none !important;
     }
@@ -548,25 +482,25 @@ table.print-layout > tfoot {
         color: #000000 !important;
         box-shadow: none !important;
         border-radius: var(--radius-md) !important;
-        padding: 1.15rem !important;
-        margin-bottom: 1.5rem !important;
+        padding: 0.75rem 1rem !important;
+        margin-bottom: 0.85rem !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .chef-card-header {
-        margin-bottom: 0.5rem !important;
+        margin-bottom: 0.35rem !important;
     }
 
     .chef-card-title {
         color: #991b1b !important;
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
     }
 
     .chef-card-body {
         color: #000000 !important;
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
 
     .chef-card-body strong {
@@ -581,59 +515,65 @@ table.print-layout > tfoot {
         box-shadow: none !important;
         background: transparent !important;
         padding: 0 !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 0.75rem !important;
         break-inside: auto !important;
         page-break-inside: auto !important;
     }
 
+    .section-card.print-page-break {
+        break-before: page !important;
+        page-break-before: always !important;
+        padding-top: 12mm !important;
+    }
+
     .section-title {
-        font-size: 1.15rem !important;
+        font-size: 1.05rem !important;
         font-weight: 700 !important;
         color: #000000 !important;
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.25rem !important;
         break-after: avoid;
         page-break-after: avoid;
     }
 
     .section-desc {
-        font-size: 0.85rem !important;
+        font-size: 0.775rem !important;
         color: #475569 !important;
-        margin-bottom: 0.75rem !important;
+        margin-bottom: 0.45rem !important;
         break-after: avoid;
         page-break-after: avoid;
     }
 
     .nut-grid {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.6rem 1rem !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.35rem 0.75rem !important;
     }
 
     .nut-card {
         border: none !important;
         background: transparent !important;
         box-shadow: none !important;
-        padding: 0.2rem 0 !important;
+        padding: 0.1rem 0 !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .nut-name {
-        font-size: 0.9rem !important;
+        font-size: 0.825rem !important;
         font-weight: 700 !important;
         color: #000000 !important;
     }
 
     .nut-alias {
-        font-size: 0.8rem !important;
+        font-size: 0.725rem !important;
         color: #475569 !important;
-        line-height: 1.3 !important;
+        line-height: 1.2 !important;
     }
 
     .hidden-sources-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.75rem 1.25rem !important;
+        gap: 0.6rem 1rem !important;
     }
 
     .source-box {
@@ -646,43 +586,43 @@ table.print-layout > tfoot {
     }
 
     .source-category {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
         font-weight: 700 !important;
         color: #000000 !important;
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.2rem !important;
     }
 
     .source-items {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         color: #334155 !important;
-        gap: 0.3rem !important;
+        gap: 0.2rem !important;
     }
 
     .clarify-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.6rem 1.25rem !important;
+        gap: 0.4rem 1rem !important;
     }
 
     .clarify-item {
         border: none !important;
         background: transparent !important;
         box-shadow: none !important;
-        padding: 0.2rem 0 !important;
+        padding: 0 !important;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .clarify-title {
-        font-size: 0.85rem !important;
+        font-size: 0.8rem !important;
         font-weight: 700 !important;
         color: #000000 !important;
-        margin-bottom: 0.15rem !important;
+        margin-bottom: 0.1rem !important;
     }
 
     .clarify-desc {
-        font-size: 0.775rem !important;
+        font-size: 0.725rem !important;
         color: #334155 !important;
-        line-height: 1.35 !important;
+        line-height: 1.25 !important;
     }
 }
