@@ -416,6 +416,31 @@ p.page-subtitle {
 
 
 
+/* Print Layout Table Screen Reset */
+table.print-layout {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+table.print-layout,
+table.print-layout > tbody,
+table.print-layout > tbody > tr,
+table.print-layout > tbody > tr > td {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+table.print-layout > thead,
+table.print-layout > tfoot {
+    display: none;
+}
+
 /* Print Specific Styling */
 @page {
     margin: 0;
@@ -423,11 +448,25 @@ p.page-subtitle {
 }
 
 @media print {
+    *,
+    *::before,
+    *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html,
     body {
         background: #ffffff !important;
         color: #000000 !important;
         margin: 0 !important;
-        padding: 1.5cm !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    body {
+        font-size: 9.5pt;
+        line-height: 1.45;
     }
 
     .action-bar,
@@ -435,34 +474,215 @@ p.page-subtitle {
         display: none !important;
     }
 
-    .container {
-        max-width: 100% !important;
+    /* Print Pagination Table Structure - Creates Uniform Margin on EVERY Page */
+    table.print-layout {
+        display: table !important;
+        width: 100% !important;
+        border-collapse: collapse !important;
+        border: none !important;
+        margin: 0 !important;
         padding: 0 !important;
     }
 
+    table.print-layout > thead {
+        display: table-header-group !important;
+    }
+
+    table.print-layout > tfoot {
+        display: table-footer-group !important;
+    }
+
+    table.print-layout > tbody {
+        display: table-row-group !important;
+    }
+
+    table.print-layout > tbody > tr {
+        display: table-row !important;
+    }
+
+    table.print-layout > tbody > tr > td {
+        display: table-cell !important;
+        padding: 0 16mm !important; /* Left & right margin on every page */
+        border: none !important;
+        vertical-align: top !important;
+    }
+
+    .print-header-space .print-spacer {
+        display: block !important;
+        height: 16mm !important; /* Top margin on every page */
+    }
+
+    .print-footer-space .print-spacer {
+        display: block !important;
+        height: 16mm !important; /* Bottom margin on every page */
+    }
+
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .header-section {
+        margin-bottom: 1.25rem !important;
+    }
+
+    h1.page-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.25rem !important;
+        color: #000000 !important;
+    }
+
+    p.page-subtitle {
+        font-size: 0.95rem !important;
+        margin-bottom: 0 !important;
+        color: #475569 !important;
+        max-width: none !important;
+    }
+
+    /* Keep border outline only on the Allergen Summary Card */
     .chef-card {
-        border: 3px solid #dc2626 !important;
-        background: #ffffff !important;
+        border: 2px solid #dc2626 !important;
+        background: #fef2f2 !important;
         color: #000000 !important;
         box-shadow: none !important;
+        border-radius: var(--radius-md) !important;
+        padding: 1.15rem !important;
+        margin-bottom: 1.5rem !important;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
-    .chef-card-body,
+    .chef-card-header {
+        margin-bottom: 0.5rem !important;
+    }
+
     .chef-card-title {
-        color: #000000 !important;
+        color: #991b1b !important;
+        font-size: 1.2rem !important;
     }
 
+    .chef-card-body {
+        color: #000000 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .chef-card-body strong {
+        color: #991b1b !important;
+        text-decoration: underline !important;
+        text-decoration-color: #dc2626 !important;
+    }
+
+    /* Make all other card outlines and container borders invisible */
     .section-card {
-        border: 1px solid #cccccc !important;
+        border: none !important;
         box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin-bottom: 1.5rem !important;
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+    }
+
+    .section-title {
+        font-size: 1.15rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        margin-bottom: 0.35rem !important;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .section-desc {
+        font-size: 0.85rem !important;
+        color: #475569 !important;
+        margin-bottom: 0.75rem !important;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .nut-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.6rem 1rem !important;
+    }
+
+    .nut-card {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0.2rem 0 !important;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
-    .nut-card,
-    .source-box,
+    .nut-name {
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+    }
+
+    .nut-alias {
+        font-size: 0.8rem !important;
+        color: #475569 !important;
+        line-height: 1.3 !important;
+    }
+
+    .hidden-sources-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem 1.25rem !important;
+    }
+
+    .source-box {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .source-category {
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        margin-bottom: 0.35rem !important;
+    }
+
+    .source-items {
+        font-size: 0.8rem !important;
+        color: #334155 !important;
+        gap: 0.3rem !important;
+    }
+
+    .clarify-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.6rem 1.25rem !important;
+    }
+
     .clarify-item {
-        border: 1px solid #e0e0e0 !important;
-        background: #ffffff !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0.2rem 0 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .clarify-title {
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        margin-bottom: 0.15rem !important;
+    }
+
+    .clarify-desc {
+        font-size: 0.775rem !important;
+        color: #334155 !important;
+        line-height: 1.35 !important;
     }
 }
